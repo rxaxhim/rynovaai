@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rynova AI - Coming Soon</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: radial-gradient(circle at center, #0c121f 0%, #05070e 100%);
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: fadeInBody 1.5s ease-out;
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32"><circle cx="16" cy="16" r="5" fill="%2300b98b"/></svg>'), auto;
+      position: relative;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo-container {
+      position: relative;
+    }
+
+    .logo-container::before {
+      content: "";
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(0,185,139,0.3) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      animation: pulseGlow 4s infinite ease-in-out;
+      z-index: -1;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
+    img {
+      width: 280px;
+      max-width: 90%;
+      height: auto;
+      filter: drop-shadow(0 0 12px rgba(0, 185, 139, 0.5));
+      animation: floatLogo 6s ease-in-out infinite, pulse 3s ease-in-out infinite;
+      transition: transform 0.4s ease;
+      transform-style: preserve-3d;
+    }
+
+    img:hover {
+      transform: rotateY(8deg) rotateX(3deg) scale(1.02);
+    }
+
+    @keyframes floatLogo {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { filter: drop-shadow(0 0 12px rgba(0, 185, 139, 0.5)); }
+      50% { filter: drop-shadow(0 0 20px rgba(0, 185, 139, 0.9)); }
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-top: 40px;
+      margin-bottom: 50px;
+      color: #c9d1d9;
+      animation: fadeInText 2s ease;
+      min-height: 1.5em;
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #progress {
+      width: 80%;
+      max-width: 500px;
+      background-color: #1f1f1f;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 185, 139, 0.25);
+    }
+
+    #fill {
+      height: 20px;
+      width: 35%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 400;
+      background: linear-gradient(270deg, #00b98b, #00a179, #00b98b);
+      background-size: 600% 600%;
+      animation: fillAnim 2s ease-out, shimmer 4s infinite linear;
+      box-shadow: 0 0 8px rgba(0, 185, 139, 0.4);
+    }
+
+    @keyframes fillAnim {
+      from { width: 0%; }
+      to { width: 35%; }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    @media (max-width: 600px) {
+      h2 { font-size: 1.1rem; }
+      #fill { font-size: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <div class="logo-container">
+    <img src="logo.png" alt="Rynova AI Logo" />
+  </div>
+
+  <h2 id="typewriter"></h2>
+
+  <div id="progress">
+    <div id="fill">35%</div>
+  </div>
+
+  <script>
+    // Typewriter animation
+    const text = "Our website is currently under construction";
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 40);
+      }
+    }
+    window.onload = type;
+
+    // Lightweight particle background
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    let w, h, particles;
+
+    function resize() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener("resize", resize);
+    resize();
+
+    function createParticles(count) {
+      return Array.from({ length: count }, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 1.5 + 0.5,
+        dx: (Math.random() - 0.5) * 0.2,
+        dy: (Math.random() - 0.5) * 0.2
+      }));
+    }
+
+    particles = createParticles(100);
+
+    function animate() {
+      ctx.clearRect(0, 0, w, h);
+      for (let p of particles) {
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if (p.x < 0 || p.x > w) p.dx *= -1;
+        if (p.y < 0 || p.y > h) p.dy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(0,185,139,0.2)";
+        ctx.fill();
+      }
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
