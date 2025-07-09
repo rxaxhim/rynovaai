@@ -223,17 +223,15 @@
     .logo-marquee-under {
       display: flex; align-items: center; gap: 72px; min-width: 900px; width: 100%;
       animation: scrollBrand 32s linear infinite;
+      margin-right: 72px;
     }
     .logo-marquee-under img {
-      height: 40px; opacity: 0.56;
-      filter: grayscale(97%) brightness(1.13);
-      transition: filter .18s, opacity .18s, box-shadow 0.15s;
+      height: 40px; opacity: 0.85;
+      transition: opacity .18s, box-shadow 0.15s;
       border-radius: 8px;
     }
     .logo-marquee-under img:hover {
-      opacity: 0.93;
-      filter: grayscale(0%) brightness(1.18) drop-shadow(0 0 6px var(--main-soft));
-      box-shadow: 0 0 0 2px var(--main-soft);
+      opacity: 1;
     }
     @keyframes scrollBrand {
       0% { transform: translateX(0);}
@@ -244,6 +242,33 @@
     /* Scroll Margin for anchor headings */
     section, .section-title, .metrics-title, .case-title, .calculator-section, .cta-section {
       scroll-margin-top: calc(var(--nav-height) + 25px);
+    }
+    .logo-reflect {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      text-align: center;
+    }
+
+    .logo-reflect img {
+      display: block;
+      height: 40px;
+      border-radius: 8px;
+      background: none;
+    }
+
+    .logo-reflect .logo-reflection-img {
+      margin-top: 4px;
+      height: 40px;                /* make reflection a bit shorter */
+      transform: scaleY(-1);       /* flip vertically */
+      opacity: 0.35;
+      border-radius: 8px;
+      background: none;
+      /* Fade out the reflection (modern browsers): */
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.24) 75%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.24) 75%, transparent 100%);
+      /* If needed, remove pointer events */
+      pointer-events: none;
     }
 
     /* ---- FEATURES/WHY SWITCH ---- */
@@ -468,9 +493,162 @@
       /* moved button styling to above for full consistency */
     }
     footer {
-      background: #0b1019; text-align: center; padding: 38px 5vw 22px 5vw;
-      font-size: 1.09rem; color: #87e3cf; border-top: 1.2px solid var(--border); margin-top: 62px;
+      background: #0b1019;
+      text-align: center;
+      padding: 38px 5vw 22px 5vw;
+      font-size: 1.09rem;
+      color: #87e3cf;
+      border-top: 1.2px solid var(--border);
+      margin-top: 62px;
     }
+
+    .footer-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .footer-logo-img {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      margin-bottom: 2px;
+      filter: drop-shadow(0 0 8px #41ffe366);
+      opacity: 0.97;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-bottom: 4px;
+    }
+    .footer-links a {
+      color: var(--main-soft);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.09rem;
+      padding: 6px 0;
+      border-radius: 5px;
+      transition: background .15s, color .16s;
+    }
+    .footer-links a:hover, .footer-links a:focus {
+      background: none;
+      color: #fff;
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 2px;
+    }
+    .footer-contact a {
+      color: var(--main-soft);
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 0px;
+      transition: text-decoration .16s;
+    }
+    .footer-contact a:hover {
+      text-decoration: underline;
+    }
+    .footer-location {
+      font-size: .98em;
+      opacity: .62;
+      margin-bottom: 2px;
+    }
+    .footer-linkedin {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4px;
+      background: rgba(65,255,227,0.09);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      transition: background 0.15s, box-shadow 0.2s;
+    }
+    .footer-linkedin:hover {
+      background: #41ffe320;
+      box-shadow: 0 0 0 2px #41ffe388;
+    }
+
+    .footer-divider {
+      width: 54vw;
+      max-width: 280px;
+      height: 1px;
+      background: #41ffe322;
+      margin: 16px 0 10px 0;
+      border-radius: 1px;
+    }
+
+    .footer-bottom {
+      font-size: 0.98em;
+      color: #70dac2;
+      opacity: 0.92;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+    }
+    .footer-bottom a {
+      color: #53ffdc;
+      margin: 0 4px;
+      text-decoration: none;
+      font-size: 0.99em;
+    }
+    .footer-bottom a:hover {
+      color: var(--main-soft);
+      text-decoration: underline;
+    }
+    .footer-made-in {
+      margin-top: 3px;
+      font-size: 0.97em;
+      opacity: 0.67;
+      letter-spacing: .01em;
+    }
+
+    /* Adjust padding for a compact look */
+    footer {
+      padding: 22px 4vw 12px 4vw;
+    }
+
+    @media (min-width: 601px) {
+      .footer-links {
+        flex-direction: row;
+        gap: 18px;
+      }
+      .footer-main {
+        gap: 14px;
+      }
+      .footer-contact {
+        flex-direction: row;
+        gap: 10px;
+      }
+    }
+    @media (max-width: 600px) {
+  .footer-links {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 0;
+    width: 100%;
+    justify-items: center;
+    margin-bottom: 8px;
+    padding: 0;
+  }
+  .footer-links a {
+    width: 100%;
+    text-align: center;
+    padding: 7px 0;
+  }
+  .footer-links a:nth-child(5) {
+    grid-column: 1 / span 2; /* Make the last link span two columns */
+    justify-self: center;
+  }
+}
   </style>
 </head>
 <body>
@@ -507,22 +685,59 @@
     <div class="brand-marquee-wrap">
       <div class="brand-marquee-inner">
         <div class="logo-marquee-under">
-          <img src="brand1.png" alt="Brand 1"/>
-          <img src="brand2.png" alt="Brand 2"/>
-          <img src="brand3.png" alt="Brand 3"/>
-          <img src="brand4.png" alt="Brand 4"/>
-          <img src="brand5.png" alt="Brand 5"/>
-          <img src="brand6.png" alt="Brand 6"/>
+          <span class="logo-reflect">
+            <img src="google.png" alt="Google"/>
+            <img src="google.png" alt="Google Reflection" class="logo-reflection-img"/>
+          </span>
+          <span class="logo-reflect">
+            <img src="twilio.png" alt="Twilio"/>
+            <img src="twilio.png" alt="Twilio Reflection" class="logo-reflection-img"/>
+          </span>
+          <span class="logo-reflect">
+            <img src="openai.png" alt="OpenAI"/>
+            <img src="openai.png" alt="OpenAI Reflection" class="logo-reflection-img"/>
+          </span>
+          <span class="logo-reflect">
+            <img src="n8n.png" alt="n8n"/>
+            <img src="n8n.png" alt="n8n Reflection" class="logo-reflection-img"/>
+          </span>
+          <span class="logo-reflect">
+            <img src="square.png" alt="Square"/>
+            <img src="square.png" alt="Square Reflection" class="logo-reflection-img"/>
+          </span>
+          <span class="logo-reflect">
+            <img src="hubspot.png" alt="HubSpot"/>
+            <img src="hubspot.png" alt="HubSpot Reflection" class="logo-reflection-img"/>
+          </span>
         </div>
         <div class="logo-marquee-under">
-          <img src="brand1.png" alt="Brand 1"/>
-          <img src="brand2.png" alt="Brand 2"/>
-          <img src="brand3.png" alt="Brand 3"/>
-          <img src="brand4.png" alt="Brand 4"/>
-          <img src="brand5.png" alt="Brand 5"/>
-          <img src="brand6.png" alt="Brand 6"/>
+          <span class="logo-reflect">
+            <img src="google.png" alt="Google"/>
+            <img src="google.png" alt="Google Reflection" class="logo-reflection-img"/>
+          </span>
+          <span class="logo-reflect">
+            <img src="twilio.png" alt="Twilio"/>
+            <img src="twilio.png" alt="Twilio Reflection" class="logo-reflection-img"/>
+          </span>
+          <span class="logo-reflect">
+            <img src="openai.png" alt="OpenAI"/>
+            <img src="openai.png" alt="OpenAI Reflection" class="logo-reflection-img"/>
+          </span>
+          <span class="logo-reflect">
+            <img src="n8n.png" alt="n8n"/>
+            <img src="n8n.png" alt="n8n Reflection" class="logo-reflection-img"/>
+          </span>
+          <span class="logo-reflect">
+            <img src="square.png" alt="Square"/>
+            <img src="square.png" alt="Square Reflection" class="logo-reflection-img"/>
+          </span>
+          <span class="logo-reflect">
+            <img src="hubspot.png" alt="HubSpot"/>
+            <img src="hubspot.png" alt="HubSpot Reflection" class="logo-reflection-img"/>
+          </span>
         </div>
       </div>
+
     </div>
   </header>
 
@@ -535,7 +750,7 @@
           <p>100% of your leads get answered—no more voicemails, no more lost revenue.</p>
         </div>
         <div class="feature-block">
-          <h4>Human-like AI, 24/7</h4>
+          <h4>Ultra Human AI, 24/7</h4>
           <p>Clients can book, reschedule, and get info even when you’re closed.</p>
         </div>
         <div class="feature-block">
@@ -620,7 +835,34 @@
       <a href="mailto:contact@rynovaai.com">Book a Free Demo</a>
     </section>
     <footer>
-      &copy; 2025 Rynova AI — All rights reserved
+      <div class="footer-main">
+        <img src="logo.png" alt="Rynova AI Logo" class="footer-logo-img"/>
+        <div class="footer-links">
+          <a href="#about">Why Rynova</a>
+          <a href="#metrics">Metrics</a>
+          <a href="#success">Success Stories</a>
+          <a href="#calculator">Savings</a>
+          <a href="#contact">Book a Demo</a>
+        </div>
+        <div class="footer-contact">
+          <a href="mailto:contact@rynovaai.com">contact@rynovaai.com</a>
+          <span class="footer-location">Mississauga, ON</span>
+          <a href="https://linkedin.com/company/rynova" target="_blank" aria-label="LinkedIn" class="footer-linkedin">
+            <svg height="22" width="22" viewBox="0 0 32 32" style="vertical-align: middle;">
+              <circle cx="16" cy="16" r="16" fill="#41ffe3" opacity="0.16"/>
+              <path fill="#41ffe3" d="M26 24h-3.429v-5.692c0-1.357-.021-3.104-1.893-3.104-1.894 0-2.184 1.479-2.184 3.007V24H15.064V13h3.292v1.507h.048c.459-.868 1.581-1.783 3.254-1.783 3.482 0 4.125 2.292 4.125 5.275V24zM9.444 11.492A1.99 1.99 0 1 1 9.44 7.51a1.99 1.99 0 0 1 .004 3.982zm1.716 12.508H7.72V13h3.44v11z"/>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <div>&copy; 2025 Rynova AI — All rights reserved</div>
+          <div>
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="termsofservice.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
     </footer>
   </main>
   <script>

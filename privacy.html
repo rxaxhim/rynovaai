@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy | Rynova AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="logo.png"/>
+  <style>
+    body {
+      background: #101624;
+      color: #d5ffe7;
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .policy-container {
+      max-width: 680px;
+      margin: 50px auto;
+      background: rgba(22,32,55,0.91);
+      border-radius: 14px;
+      box-shadow: 0 0 18px 0 #41ffe32f;
+      padding: 36px 18px 28px 18px;
+    }
+    .policy-logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .policy-logo img {
+      width: 70px;
+      height: 70px;
+      border-radius: 14px;
+      box-shadow: 0 0 18px #41ffe3b2, 0 1px 8px #00f6bf28;
+      background: #181d27;
+      padding: 7px;
+      opacity: 0.98;
+      transition: box-shadow 0.2s;
+    }
+    .policy-logo img:hover {
+      box-shadow: 0 0 26px #41ffe3e9, 0 2px 18px #00f6bf42;
+    }
+    .policy-back {
+    text-align: center;
+    margin-bottom: 16px;
+    }
+    .policy-back a {
+    color: #41ffe3;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 1.06rem;
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.16s;
+    }
+    .policy-back a:hover {
+    color: #00e6b6;
+    text-decoration: underline;
+    background: none;
+    box-shadow: none;
+    }
+    h1, h2 {
+      color: #41ffe3;
+      margin-top: 0;
+    }
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 900;
+      margin-bottom: 26px;
+      text-align: center;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-size: 1.27rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+    a {
+      color: #00e6b6;
+      text-decoration: underline;
+    }
+    p {
+      margin: 13px 0;
+      line-height: 1.64;
+    }
+    ul {
+      margin: 7px 0 7px 25px;
+      padding: 0;
+      color: #d5ffe7;
+    }
+    .policy-container ul li {
+      margin-bottom: 7px;
+      line-height: 1.54;
+    }
+    /* --- Footer Styles --- */
+    footer {
+      background: #0b1019;
+      text-align: center;
+      padding: 38px 5vw 22px 5vw;
+      font-size: 1.09rem;
+      color: #87e3cf;
+      border-top: 1.2px solid #41ffe320;
+      margin-top: 62px;
+    }
+    .footer-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 13px;
+    }
+    .footer-logo-img {
+      width: 46px;
+      height: 46px;
+      border-radius: 11px;
+      margin-bottom: 5px;
+      filter: drop-shadow(0 0 8px #41ffe366);
+      opacity: 0.97;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 6px;
+    }
+    .footer-links a {
+      color: #87e3cf;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.01rem;
+      transition: color .2s;
+    }
+    .footer-links a:hover {
+      color: var(--main-soft, #41ffe3);
+    }
+    .footer-contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 2px;
+    }
+    .footer-contact a {
+      color: var(--main-soft, #41ffe3);
+      text-decoration: none;
+      margin-right: 5px;
+    }
+    .footer-location {
+      font-size: .96em;
+      opacity: .73;
+    }
+    .footer-linkedin {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4px;
+      background: rgba(65,255,227,0.09);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      transition: background 0.15s, box-shadow 0.2s;
+    }
+    .footer-linkedin:hover {
+      background: #41ffe320;
+      box-shadow: 0 0 0 2px #41ffe388;
+    }
+    .footer-divider {
+      width: 54vw;
+      max-width: 280px;
+      height: 1px;
+      background: #41ffe322;
+      margin: 16px 0 10px 0;
+      border-radius: 1px;
+    }
+    .footer-bottom {
+      font-size: 0.99em;
+      color: #70dac2;
+      opacity: 0.87;
+      margin-top: 15px;
+    }
+    .footer-bottom a {
+      color: #53ffdc;
+      margin: 0 4px;
+      text-decoration: none;
+      font-size: 0.99em;
+    }
+    .footer-bottom a:hover {
+      color: var(--main-soft, #41ffe3);
+    }
+    .footer-made-in {
+      margin-top: 3px;
+      font-size: 0.97em;
+      opacity: 0.67;
+      letter-spacing: .01em;
+    }
+    @media (max-width: 600px) {
+      .policy-container {
+        margin: 16px 3vw;
+        padding: 18px 6vw 18px 6vw;
+      }
+      .policy-logo img {
+        width: 53px;
+        height: 53px;
+        padding: 4px;
+      }
+      h1 { font-size: 1.35rem; }
+      .footer-links {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .footer-main {
+        gap: 14px;
+      }
+      .footer-contact {
+        flex-direction: column;
+        gap: 3px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="policy-container">
+    <div class="policy-logo">
+      <img src="logo.png" alt="Rynova AI Logo" />
+    </div>
+    <div class="policy-back">
+    <a href="index.html">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;">
+        <path d="M4 11.5L12 4L20 11.5" stroke="#41ffe3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4 11.5V19C4 19.8284 4.67157 20.5 5.5 20.5H18.5C19.3284 20.5 20 19.8284 20 19V11.5" stroke="#41ffe3" stroke-width="2"/>
+        <rect x="9" y="15" width="6" height="5" rx="1" fill="none" stroke="#41ffe3" stroke-width="2"/>
+        </svg>
+        Back to Home
+    </a>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p><b>Effective Date:</b> July 9, 2025</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>We collect information you provide directly via forms on our website, such as your name, email address, phone number, and business details. We may also collect data automatically through cookies and analytics tools (like Google Analytics).</p>
+
+    <h2>2. How We Use Information</h2>
+    <p>We use your information to:</p>
+    <ul>
+      <li>Respond to inquiries and demo requests</li>
+      <li>Book and confirm appointments</li>
+      <li>Send you reminders, updates, and relevant offers</li>
+      <li>Improve our services and website</li>
+      <li>Comply with legal obligations</li>
+    </ul>
+
+    <h2>3. Information Sharing</h2>
+    <p>We do not sell your personal information. We may share your data with trusted third-party providers (such as our CRM or email services) solely for the purpose of delivering our services. All such providers are required to protect your data.</p>
+
+    <h2>4. Cookies and Analytics</h2>
+    <p>Our site may use cookies to enhance your browsing experience and collect analytics data. You may disable cookies in your browser settings, though some features may not function optimally.</p>
+
+    <h2>5. Data Security</h2>
+    <p>We implement standard security measures to protect your information from unauthorized access or disclosure. However, no method of transmission over the Internet is 100% secure.</p>
+
+    <h2>6. Your Rights</h2>
+    <p>You may request access to, correction of, or deletion of your personal data at any time. To exercise your rights, please contact us at <a href="mailto:contact@rynovaai.com">contact@rynovaai.com</a>.</p>
+
+    <h2>7. Updates to This Policy</h2>
+    <p>We may update this policy periodically. Changes will be posted on this page, and the effective date will be updated above.</p>
+
+    <h2>8. Contact</h2>
+    <p>For questions about this Privacy Policy, please contact us at <a href="mailto:contact@rynovaai.com">contact@rynovaai.com</a>.</p>
+
+    <p style="margin-top:38px; color:#8deee7; font-size:0.98em; text-align:center;">&copy; 2025 Rynova AI</p>
+  </div>
+
+  <footer>
+    <div class="footer-main">
+      <img src="logo.png" alt="Rynova AI Logo" class="footer-logo-img"/>
+      <div class="footer-contact">
+        <a href="mailto:contact@rynovaai.com">contact@rynovaai.com</a>
+        <span class="footer-location">Mississauga, ON</span>
+        <a href="https://linkedin.com/company/rynova" target="_blank" aria-label="LinkedIn" class="footer-linkedin">
+          <svg height="22" width="22" viewBox="0 0 32 32" style="vertical-align: middle;">
+            <circle cx="16" cy="16" r="16" fill="#41ffe3" opacity="0.16"/>
+            <path fill="#41ffe3" d="M26 24h-3.429v-5.692c0-1.357-.021-3.104-1.893-3.104-1.894 0-2.184 1.479-2.184 3.007V24H15.064V13h3.292v1.507h.048c.459-.868 1.581-1.783 3.254-1.783 3.482 0 4.125 2.292 4.125 5.275V24zM9.444 11.492A1.99 1.99 0 1 1 9.44 7.51a1.99 1.99 0 0 1 .004 3.982zm1.716 12.508H7.72V13h3.44v11z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <div>&copy; 2025 Rynova AI — All rights reserved</div>
+        <div>
+          <a href="#">Privacy Policy</a> |
+          <a href="termsofservice.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
