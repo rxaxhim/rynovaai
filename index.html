@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rynova AI – Next-Gen AI Reception & Automation</title>
-  <link rel="icon" href="logo.png"/>
+  <link rel="icon" href="images/logo.png"/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"/>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
@@ -938,11 +938,23 @@
   }
   .section-title { font-size: 1.2rem; }
 }
+  @media (max-width: 600px) {
+    #logo-intro-img { width: 130px; max-width: 55vw; }
+  }
+  #hero-logo {
+    opacity: 0;
+    transition: opacity 0.45s;
+    border-radius: 0;
+  }
 
 
   </style>
 </head>
 <body>
+  <div id="logo-intro-overlay" style="position:fixed;z-index:9999;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#101624 60%,#0b1019 100%);transition:opacity .6s cubic-bezier(.4,0,.2,1);">
+    <img id="logo-intro-img" src="images/logo.png" alt="Rynova Logo Intro"
+      style="width:210px;max-width:44vw;filter:drop-shadow(0 0 50px #00f6bfcc);border-radius:0;transition:all 1s cubic-bezier(.76,1.9,.14,.97);">
+  </div>
   <div id="bg-particles"></div>
   <button class="sticky-demo" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Book Demo</button>
   <nav>
@@ -963,7 +975,7 @@
   </nav>
   <header>
     <div class="logo-container">
-      <img src="logo.png" alt="Rynova Logo"/>
+      <img id="hero-logo" src="images/logo.png" alt="Rynova Logo"/>
     </div>
     <h1>AI Automation. 24/7 Growth.<br>Zero Missed Clients.</h1>
     <p>
@@ -988,70 +1000,70 @@
       <div class="brand-marquee-inner">
         <div class="logo-marquee-under">
           <span class="logo-reflect">
-            <img src="google.png" alt="Google"/>
-            <img src="google.png" alt="Google Reflection" class="logo-reflection-img"/>
+            <img src="images/google.png" alt="Google"/>
+            <img src="images/google.png" alt="Google Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="twilio.png" alt="Twilio"/>
-            <img src="twilio.png" alt="Twilio Reflection" class="logo-reflection-img"/>
+            <img src="images/twilio.png" alt="Twilio"/>
+            <img src="images/twilio.png" alt="Twilio Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="openai.png" alt="OpenAI"/>
-            <img src="openai.png" alt="OpenAI Reflection" class="logo-reflection-img"/>
+            <img src="images/openai.png" alt="OpenAI"/>
+            <img src="images/openai.png" alt="OpenAI Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="n8n.png" alt="n8n"/>
-            <img src="n8n.png" alt="n8n Reflection" class="logo-reflection-img"/>
+            <img src="images/n8n.png" alt="n8n"/>
+            <img src="images/n8n.png" alt="n8n Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="square.png" alt="Square"/>
-            <img src="square.png" alt="Square Reflection" class="logo-reflection-img"/>
+            <img src="images/square.png" alt="Square"/>
+            <img src="images/square.png" alt="Square Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="hubspot.png" alt="HubSpot"/>
-            <img src="hubspot.png" alt="HubSpot Reflection" class="logo-reflection-img"/>
+            <img src="images/hubspot.png" alt="HubSpot"/>
+            <img src="images/hubspot.png" alt="HubSpot Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="monday.png" alt="Monday"/>
-            <img src="monday.png" alt="Monday Reflection" class="logo-reflection-img"/>
+            <img src="images/monday.png" alt="Monday"/>
+            <img src="images/monday.png" alt="Monday Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="zenoti.png" alt="Zenoti"/>
-            <img src="zenoti.png" alt="Zenoti Reflection" class="logo-reflection-img"/>
+            <img src="images/zenoti.png" alt="Zenoti"/>
+            <img src="images/zenoti.png" alt="Zenoti Reflection" class="logo-reflection-img"/>
           </span>
         </div>
         <div class="logo-marquee-under">
           <span class="logo-reflect">
-            <img src="google.png" alt="Google"/>
-            <img src="google.png" alt="Google Reflection" class="logo-reflection-img"/>
+            <img src="images/google.png" alt="Google"/>
+            <img src="images/google.png" alt="Google Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="twilio.png" alt="Twilio"/>
-            <img src="twilio.png" alt="Twilio Reflection" class="logo-reflection-img"/>
+            <img src="images/twilio.png" alt="Twilio"/>
+            <img src="images/twilio.png" alt="Twilio Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="openai.png" alt="OpenAI"/>
-            <img src="openai.png" alt="OpenAI Reflection" class="logo-reflection-img"/>
+            <img src="images/openai.png" alt="OpenAI"/>
+            <img src="images/openai.png" alt="OpenAI Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="n8n.png" alt="n8n"/>
-            <img src="n8n.png" alt="n8n Reflection" class="logo-reflection-img"/>
+            <img src="images/n8n.png" alt="n8n"/>
+            <img src="images/n8n.png" alt="n8n Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="square.png" alt="Square"/>
-            <img src="square.png" alt="Square Reflection" class="logo-reflection-img"/>
+            <img src="images/square.png" alt="Square"/>
+            <img src="images/square.png" alt="Square Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="hubspot.png" alt="HubSpot"/>
-            <img src="hubspot.png" alt="HubSpot Reflection" class="logo-reflection-img"/>
+            <img src="images/hubspot.png" alt="HubSpot"/>
+            <img src="images/hubspot.png" alt="HubSpot Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="monday.png" alt="Monday"/>
-            <img src="monday.png" alt="Monday Reflection" class="logo-reflection-img"/>
+            <img src="images/monday.png" alt="Monday"/>
+            <img src="images/monday.png" alt="Monday Reflection" class="logo-reflection-img"/>
           </span>
           <span class="logo-reflect">
-            <img src="zenoti.png" alt="Zenoti"/>
-            <img src="zenoti.png" alt="Zenoti Reflection" class="logo-reflection-img"/>
+            <img src="images/zenoti.png" alt="Zenoti"/>
+            <img src="images/zenoti.png" alt="Zenoti Reflection" class="logo-reflection-img"/>
           </span>
         </div>
       </div>
@@ -1262,7 +1274,7 @@
     </section>
     <footer>
       <div class="footer-main">
-        <img src="logo.png" alt="Rynova AI Logo" class="footer-logo-img"/>
+        <img src="images/logo.png" alt="Rynova AI Logo" class="footer-logo-img"/>
         <div class="footer-links">
           <a href="#about">Why Rynova</a>
           <a href="#metrics">Metrics</a>
@@ -1464,6 +1476,51 @@
         if (e.target === this) closeCalendlyModal();
       }
     });
+
+    window.addEventListener("DOMContentLoaded", function() {
+      const overlay = document.getElementById('logo-intro-overlay');
+      const introLogo = document.getElementById('logo-intro-img');
+      const heroLogo = document.getElementById('hero-logo');
+
+      setTimeout(() => {
+        // Get positions and scale for the main hero logo
+        const heroRect = heroLogo.getBoundingClientRect();
+        const introRect = introLogo.getBoundingClientRect();
+
+        // Center coordinates for both logos
+        const heroCenterX = heroRect.left + heroRect.width / 2;
+        const heroCenterY = heroRect.top + heroRect.height / 2;
+        const introCenterX = introRect.left + introRect.width / 2;
+        const introCenterY = introRect.top + introRect.height / 2;
+
+        // Calculate scale needed for introLogo to match heroLogo size
+        const scale = heroRect.width / introRect.width;
+
+        // Calculate translation distances
+        const deltaX = heroCenterX - introCenterX;
+        const deltaY = heroCenterY - introCenterY;
+
+        // Animate shrink, move, and fade out
+        introLogo.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${scale})`;
+        introLogo.style.boxShadow = "0 0 30px #41ffe399, 0 0 100px #00f6bf60";
+        introLogo.style.opacity = "0.95";
+
+        setTimeout(() => {
+          overlay.style.opacity = "0";
+          overlay.style.pointerEvents = "none";
+        }, 1100);
+
+        setTimeout(() => {
+          overlay.remove();
+        }, 1650);
+      }, 700);
+
+      setTimeout(() => {
+        document.getElementById('hero-logo').style.opacity = '1';
+      }, 1200);
+
+    });
+
   </script>
 </body>
 </html>
