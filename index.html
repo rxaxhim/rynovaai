@@ -648,23 +648,57 @@
       }
     }
     @media (max-width: 600px) {
+  .footer-main {
+    gap: 6px;
+    padding-top: 8px;
+    padding-bottom: 2px;
+  }
+  .footer-logo-img {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 2px;
+  }
   .footer-links {
     display: grid !important;
     grid-template-columns: 1fr 1fr;
     gap: 4px 0;
     width: 100%;
     justify-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     padding: 0;
   }
   .footer-links a {
     width: 100%;
     text-align: center;
-    padding: 7px 0;
+    padding: 6px 0;
+    font-size: 0.97rem;
   }
   .footer-links a:nth-child(5) {
-    grid-column: 1 / span 2; /* Make the last link span two columns */
+    grid-column: 1 / span 2; /* "Book a Demo" spans both columns */
     justify-self: center;
+  }
+  .footer-contact {
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 0;
+  }
+  .footer-location {
+    font-size: .97em;
+    margin-bottom: 0;
+  }
+  .footer-linkedin {
+    margin-top: 2px;
+    width: 28px;
+    height: 28px;
+  }
+  .footer-divider {
+    margin: 7px 0 2px 0;
+    max-width: 90px;
+  }
+  .footer-bottom {
+    font-size: .96em;
+    gap: 1px;
+    margin-top: 2px;
   }
 }
 .missed-call-stats-section {
