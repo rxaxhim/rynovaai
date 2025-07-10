@@ -197,6 +197,24 @@
       color: #181e2b;
     }
 
+    .calc-results-compare > div {
+      min-width: 110px;
+      box-shadow: 0 0 8px #41ffe31c;
+    }
+    .calc-testimonial {
+      border-left: 4px solid #41ffe3;
+      padding-left: 14px;
+      background: rgba(22,32,55,0.42);
+      border-radius: 8px;
+      font-style: italic;
+      color: #b0ffe9;
+      max-width: 330px;
+      margin: 0 auto;
+    }
+    @media (max-width: 650px) {
+      .calc-results-compare { flex-direction: column; gap: 7px !important;}
+    }
+
     /* Headings: font size & margin consistency */
     .section-title, .metrics-title, .case-title {
       text-align: center;
@@ -649,6 +667,143 @@
     justify-self: center;
   }
 }
+.missed-call-stats-section {
+  background: linear-gradient(120deg, var(--bg2) 74%, #0eeab210 100%);
+  padding: 62px 0 36px 0;
+  margin: 0 0 45px 0;
+}
+
+.missed-call-stats-heading {
+  text-align: center;
+  margin-bottom: 37px;
+}
+
+.missed-call-title {
+  font-size: 2.15rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 7px;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 22px #00f6bf24;
+  font-family: 'Outfit', sans-serif;
+}
+
+.missed-call-highlight {
+  font-size: 1.33rem;
+  font-weight: 800;
+  background: linear-gradient(92deg, #41ffe3 22%, #00f6bf 82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 5px;
+  letter-spacing: -.01em;
+  font-family: 'Outfit', sans-serif;
+}
+.missed-call-highlight span {
+  color: #41ffe3;
+  -webkit-text-fill-color: unset;
+}
+
+.missed-call-cards-row {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.missed-call-card {
+  background: var(--glass, rgba(22,32,55,0.85));
+  border-radius: 15px;
+  box-shadow: 0 2px 18px 0 #00f6bf21;
+  border: 1.2px solid var(--border, #41ffe317);
+  padding: 35px 24px 26px 24px;
+  min-width: 210px;
+  max-width: 290px;
+  text-align: center;
+  flex: 1 1 220px;
+  margin-bottom: 8px;
+  transition: box-shadow .17s, border-color .17s, transform .16s;
+  filter: brightness(1.01);
+}
+
+.missed-call-card:hover {
+  border-color: var(--main-soft, #41ffe3);
+  box-shadow: 0 0 22px 0 var(--main-soft, #41ffe3), 0 2px 14px 0 #00f6bf1a;
+  transform: translateY(-2px) scale(1.017);
+}
+
+.missed-call-stat {
+  color: var(--main-soft, #41ffe3);
+  font-size: 2.09rem;
+  font-weight: 900;
+  margin-bottom: 13px;
+  letter-spacing: .01em;
+  text-shadow: 0 2px 22px #00f6bf24;
+  font-family: 'Outfit', sans-serif;
+}
+
+.missed-call-desc {
+  color: #d5ffe7;
+  font-size: 1.09rem;
+  font-weight: 500;
+  opacity: .96;
+  letter-spacing: .01em;
+  line-height: 1.55;
+  font-family: 'Outfit', sans-serif;
+}
+
+@media (max-width: 900px) {
+  .missed-call-cards-row { flex-direction: column; gap: 16px; }
+  .missed-call-card { margin: 0 auto 0 auto; max-width: 97vw; }
+  .missed-call-title { font-size: 1.6rem; }
+  .missed-call-highlight { font-size: 1.08rem; }
+  .missed-call-stats-section { padding: 28px 0 18px 0; }
+}
+
+.nav-demo-btn {
+  background: linear-gradient(92deg, var(--main) 43%, var(--main-soft) 120%);
+  color: #041216 !important;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.12rem;
+  font-weight: 700;
+  box-shadow: var(--box-shadow);
+  padding: 10px 28px;
+  margin-left: 15px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow .22s, background .16s, outline .15s, transform .15s;
+  min-width: 140px;
+  line-height: 1.15;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.nav-demo-btn:hover, .nav-demo-btn:focus {
+  background: linear-gradient(97deg, #00e2b1 40%, #82ffe7 100%);
+  box-shadow: 0 0 12px 1.5px var(--main-soft), 0 2px 17px 0 #2eecff18;
+  outline: 2px solid var(--main-soft);
+  outline-offset: 0px;
+  transform: scale(1.035);
+  color: #181e2b;
+}
+
+
+  /* Responsive style for smaller screens */
+  @media (max-width: 700px) {
+    .nav-demo-btn {
+      width: 100%;
+      margin: 0 0 8px 0;
+      font-size: 1.07rem;
+      padding: 14px 0;
+      text-align: center;
+    }
+  }
+
+
   </style>
 </head>
 <body>
@@ -667,6 +822,7 @@
       <a href="#success" onclick="scrollToHeading(event,'success')">Success Stories</a>
       <a href="#calculator" onclick="scrollToHeading(event,'calculator')">Savings</a>
       <a href="#contact" onclick="scrollToHeading(event,'contact')">Contact</a>
+      <a href="#" onclick="event.preventDefault(); openCalendlyModal();" class="nav-demo-btn">Book a Demo</a>
     </div>
   </nav>
   <header>
@@ -719,6 +875,14 @@
             <img src="hubspot.png" alt="HubSpot"/>
             <img src="hubspot.png" alt="HubSpot Reflection" class="logo-reflection-img"/>
           </span>
+          <span class="logo-reflect">
+            <img src="monday.png" alt="Monday"/>
+            <img src="monday.png" alt="Monday Reflection" class="logo-reflection-img"/>
+          </span>
+          <span class="logo-reflect">
+            <img src="zenoti.png" alt="Zenoti"/>
+            <img src="zenoti.png" alt="Zenoti Reflection" class="logo-reflection-img"/>
+          </span>
         </div>
         <div class="logo-marquee-under">
           <span class="logo-reflect">
@@ -745,6 +909,14 @@
             <img src="hubspot.png" alt="HubSpot"/>
             <img src="hubspot.png" alt="HubSpot Reflection" class="logo-reflection-img"/>
           </span>
+          <span class="logo-reflect">
+            <img src="monday.png" alt="Monday"/>
+            <img src="monday.png" alt="Monday Reflection" class="logo-reflection-img"/>
+          </span>
+          <span class="logo-reflect">
+            <img src="zenoti.png" alt="Zenoti"/>
+            <img src="zenoti.png" alt="Zenoti Reflection" class="logo-reflection-img"/>
+          </span>
         </div>
       </div>
 
@@ -752,6 +924,37 @@
   </header>
 
   <main>
+<section class="missed-call-stats-section">
+  <div class="missed-call-stats-heading">
+    <div class="missed-call-title">That call you just missed?</div>
+    <div class="missed-call-highlight">
+      It could have been your <span>next paying customer.</span>
+    </div>
+  </div>
+  <div class="missed-call-cards-row">
+    <div class="missed-call-card">
+      <div class="missed-call-stat">60%</div>
+      <div class="missed-call-desc">
+        of customers prefer to call local businesses after finding them online.
+      </div>
+    </div>
+    <div class="missed-call-card">
+      <div class="missed-call-stat">38%</div>
+      <div class="missed-call-desc">
+        But only 38% of these calls get answered.
+      </div>
+    </div>
+    <div class="missed-call-card">
+      <div class="missed-call-stat">80%</div>
+      <div class="missed-call-desc">
+        of callers don't leave a voicemail, resulting in countless lost opportunities for businesses.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
     <section id="about" class="feature-section">
       <div class="section-title">Why Choose Rynova?</div>
       <div class="features-grid">
@@ -822,13 +1025,12 @@
     </section>
     <section id="calculator" class="calculator-section">
       <div class="section-title">Savings Calculator</div>
-      <div class="calculator">
+      <div class="calculator" id="savingsCalc">
         <h3>How much could you save?</h3>
         <label for="hourlyRate">What do you pay your receptionist (hourly)?</label>
-        <input id="hourlyRate" type="number" min="0" placeholder="Hourly wage in $" autocomplete="off"/>
+        <input id="hourlyRate" type="number" min="0" placeholder="Hourly wage in $" autocomplete="off" oninput="liveCalculateSavings()"/>
         <label for="hoursPerWeek">How many hours per week?</label>
-        <input id="hoursPerWeek" type="number" min="0" max="168" placeholder="Hours per week" autocomplete="off"/>
-        <button onclick="calculateSavings()">See My Savings</button>
+        <input id="hoursPerWeek" type="number" min="0" max="168" placeholder="Hours per week" autocomplete="off" oninput="liveCalculateSavings()"/>
         <div class="result" id="savingsOutput"></div>
         <div class="metrics-row">
           <span>80%+ cost savings</span>
@@ -922,24 +1124,56 @@
     });
 
     // Calculator (clean, minimal output)
-    function calculateSavings() {
+    function animateCount(element, start, end, duration) {
+      let startTime = null;
+      function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        element.textContent = '$' + (start + (end - start) * progress).toFixed(2);
+        if (progress < 1) requestAnimationFrame(step);
+        else element.textContent = '$' + end.toFixed(2);
+      }
+      requestAnimationFrame(step);
+    }
+
+    function liveCalculateSavings() {
       const rate = parseFloat(document.getElementById('hourlyRate').value);
       const hours = parseFloat(document.getElementById('hoursPerWeek').value);
       const output = document.getElementById('savingsOutput');
+
       if (isNaN(rate) || isNaN(hours) || rate < 1 || hours < 1) {
         output.innerHTML = "<span style='color:#fe9797;'>Enter a valid hourly wage and weekly hours.</span>";
         return;
       }
       const monthlyCost = rate * hours * 4;
-      const reduced = monthlyCost * 0.2;
+      const aiCost = 997;
+      const monthlySavings = monthlyCost - aiCost;
+      const annualSavings = monthlySavings * 12;
+
       output.innerHTML = `
-        <div style="padding:8px 0;">
-          <span style="font-size:1.05em;">Current monthly cost:</span>
-          <br><b style='color:var(--main);font-size:1.19em;'>$${monthlyCost.toFixed(2)}</b>
-          <br>
+        <div class="calc-results-compare" style="display:flex;gap:24px;justify-content:center;margin-bottom:12px;flex-wrap:wrap;">
+          <div style="background:#181d27a8;border-radius:10px;padding:10px 18px;min-width:120px;">
+            <div style="font-size:1em;opacity:.8;">Current</div>
+            <div id="currentCost" style="color:#41ffe3;font-weight:900;font-size:1.23em;">$${monthlyCost.toFixed(2)}</div>
+          </div>
+
+          <div style="background:#162033b6;border-radius:10px;padding:10px 18px;min-width:120px;">
+            <div style="font-size:1em;opacity:.8;">You Save<br><span style='color:#41ffe3;font-weight:500;font-size:0.91em;'>(per month)</span></div>
+            <div id="savingsCount" style="color:#41ffe3;font-weight:900;font-size:1.23em;">$${monthlySavings.toFixed(2)}</div>
+          </div>
         </div>
-        <div style="margin-top:10px;font-size:1.07em;">You are qualified for <b>80%+ savings</b> and full 24/7 coverage.</div>
+        <div style="margin-bottom:10px;color:#a8ffe5;font-size:1.10em;">
+          <b>That’s <span style='color:#41ffe3;'>$${annualSavings.toLocaleString()}</span> saved every year, guaranteed.</b>
+          <br>
+          <span style="color:#8bfff2;font-size:.98em;">
+            Plus, 24/7 coverage and up to 72% more bookings.
+          </span>
+        </div>
       `;
+
+      // Animate the savings number
+      const savingsCount = document.getElementById('savingsCount');
+      if (savingsCount) animateCount(savingsCount, 0, monthlySavings, 500);
     }
 
     // Navbar smooth scroll so heading always shows
