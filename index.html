@@ -803,6 +803,104 @@
     }
   }
 
+.compare-section {
+  max-width: 950px;
+  margin: 64px auto 0 auto;
+  /* padding: 38px 5vw 33px 5vw; */
+  /* background: rgba(20,29,40,0.93); */
+  border-radius: 22px;
+  /* box-shadow: 0 0 18px 0 #41ffe328; */
+  backdrop-filter: blur(6px);
+}
+
+.compare-table-wrap {
+  margin: 40px auto 0 auto;  /* vertical space */
+  background: linear-gradient(140deg, rgba(26,34,51,0.97) 75%, rgba(41,255,214,0.11) 150%);
+  padding: 45px 30px 28px;
+  border-radius: 18px;
+  max-width: 890px;
+  box-shadow: 0 0 7px 0 var(--main-soft), 0 2px 18px 0 #05f7b510;
+  border: none;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  backdrop-filter: blur(8px) saturate(120%);
+  transition: box-shadow 0.19s, border-color 0.15s;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(15,23,35,0.94);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 6px 0 #41ffe32a;
+}
+
+.compare-table th, .compare-table td {
+  padding: 15px 13px;
+  text-align: center;
+  font-size: 1.09em;
+  font-weight: 600;
+  border-bottom: 1.5px solid #18222f;
+}
+
+.compare-table th {
+  background: #112128;
+  color: #41ffe3;
+  font-size: 1.15em;
+  font-weight: 800;
+  letter-spacing: .01em;
+}
+
+.compare-table td {
+  color: #d8f8f0;
+  background: none;
+}
+
+.compare-table tr:last-child td {
+  border-bottom: none;
+}
+
+.compare-table td.yes {
+  color: #19fbd3;
+  font-size: 1.25em;
+  font-weight: 900;
+  text-shadow: 0 1px 8px #41ffe399;
+}
+.compare-table td.no {
+  color: #ff8a93;
+  font-size: 1.25em;
+  font-weight: 900;
+}
+.compare-table td.partial {
+  color: #fce684;
+  font-weight: 700;
+  font-size: 1.08em;
+}
+
+@media (max-width: 700px) {
+  .compare-section {
+    padding: 24px 1vw 17px 1vw;
+    border-radius: 12px;
+  }
+  .compare-table-wrap {
+    width: 94%;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 18px 3vw 15px 3vw;
+    box-sizing: border-box;
+  }
+  .compare-table th, .compare-table td {
+    padding: 12px 6px;
+    font-size: 0.96em;
+  }
+  .section-title { font-size: 1.2rem; }
+}
+
 
   </style>
 </head>
@@ -1039,6 +1137,84 @@
         </div>
       </div>
     </section>
+<section class="compare-section" id="compare">
+  <div class="section-title">Rynova vs Competitors</div>
+  <div class="compare-table-wrap">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Features</th>
+          <th>Rynova</th>
+          <th>Others</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Unlimited calls, texts, minutes, bookings</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+        </tr>
+        <tr>
+          <td>Google review campaigns</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+        </tr>
+        <tr>
+          <td>Bookings, reschedules, cancellations</td>
+          <td class="yes">✔</td>
+          <td class="partial">Limited</td>
+        </tr>
+        <tr>
+          <td>Multi-location & multi-staff support</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+        </tr>
+        <tr>
+          <td>24/7 service (no extra cost)</td>
+          <td class="yes">✔</td>
+          <td class="partial">Extra cost</td>
+        </tr>
+        <tr>
+          <td>Custom promos & follow-up</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+        </tr>
+        <tr>
+          <td>Re-engages past & lost clients</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+        </tr>
+        <tr>
+          <td>Live call transfer & escalation</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+        </tr>
+        <tr>
+          <td>AI-powered promo optimization</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+        </tr>
+        <tr>
+          <td>Custom CRM integration</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+        </tr>
+        <tr>
+          <td>Go live in 24h</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+        </tr>
+        <tr>
+          <td>No hidden fees</td>
+          <td class="yes">✔</td>
+          <td class="no">✘</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
     <section class="cta-section" id="contact">
       <h2>Ready to 10x Your Bookings?</h2>
       <p>
