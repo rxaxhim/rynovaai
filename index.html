@@ -903,7 +903,8 @@
 }
 
 .compare-table td.yes {
-  color: #19fbd3;
+  color: #19fbd3 !important;
+  font-family: 'Segoe UI Symbol', 'Apple Color Emoji', 'Noto Color Emoji', 'Outfit', sans-serif;
   font-size: 1.25em;
   font-weight: 900;
   text-shadow: 0 1px 8px #41ffe399;
@@ -1499,7 +1500,7 @@
 
         // Calculate translation distances
         const deltaX = heroCenterX - introCenterX;
-        const deltaY = heroCenterY - introCenterY;
+        const deltaY = heroCenterY - introCenterY -5;
 
         // Animate shrink, move, and fade out
         introLogo.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${scale})`;
