@@ -1506,9 +1506,11 @@
         introLogo.style.opacity = "0.95";
 
         setTimeout(() => {
-          introLogo.style.boxShadow = "none"; // Remove shadow!
-          overlay.style.opacity = "0";
-          overlay.style.pointerEvents = "none";
+        introLogo.style.boxShadow = "none";
+        introLogo.style.filter = "none";
+        introLogo.style.opacity = "0.85";
+        overlay.style.opacity = "0";
+        overlay.style.pointerEvents = "none";
         }, 1100);
 
         setTimeout(() => {
