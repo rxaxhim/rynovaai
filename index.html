@@ -953,7 +953,7 @@
 <body>
   <div id="logo-intro-overlay" style="position:fixed;z-index:9999;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#101624 60%,#0b1019 100%);transition:opacity .6s cubic-bezier(.4,0,.2,1);">
     <img id="logo-intro-img" src="images/logo.png" alt="Rynova Logo Intro"
-      style="width:210px;max-width:44vw;filter:drop-shadow(0 0 50px #00f6bfcc);border-radius:0;transition:all 1s cubic-bezier(.76,1.9,.14,.97);">
+      style="width:210px;max-width:44vw;border-radius:0;transition:all 1s cubic-bezier(.76,1.9,.14,.97);">
   </div>
   <div id="bg-particles"></div>
   <button class="sticky-demo" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Book Demo</button>
@@ -1480,6 +1480,7 @@
     window.addEventListener("DOMContentLoaded", function() {
       const overlay = document.getElementById('logo-intro-overlay');
       const introLogo = document.getElementById('logo-intro-img');
+      introLogo.style.filter = "none";
       const heroLogo = document.getElementById('hero-logo');
 
       setTimeout(() => {
@@ -1502,15 +1503,13 @@
 
         // Animate shrink, move, and fade out
         introLogo.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${scale})`;
-        introLogo.style.boxShadow = "none";        
+        introLogo.style.boxShadow = "0 0 30px #41ffe399, 0 0 100px #00f6bf60";
+        introLogo.style.filter = "none";
         introLogo.style.opacity = "0.95";
 
         setTimeout(() => {
-        introLogo.style.boxShadow = "none";
-        introLogo.style.filter = "none";
-        introLogo.style.opacity = "0.85";
-        overlay.style.opacity = "0";
-        overlay.style.pointerEvents = "none";
+          overlay.style.opacity = "0";
+          overlay.style.pointerEvents = "none";
         }, 1100);
 
         setTimeout(() => {
