@@ -135,7 +135,7 @@
       }
       .nav-links.open {
         display: flex;
-        max-height: 360px;
+        max-height: 650px;
       }
       .nav-links a { width: 100%; }
       .hamburger { display: flex; }
@@ -1431,9 +1431,12 @@
     </div>
     <div class="nav-links" id="navLinks">
       <a href="#about" onclick="scrollToHeading(event,'about')">Why Rynova?</a>
+      <a href="#industries" onclick="scrollToHeading(event,'industries')">Industries</a>
       <a href="#metrics" onclick="scrollToHeading(event,'metrics')">Metrics</a>
       <a href="#success" onclick="scrollToHeading(event,'success')">Success Stories</a>
+      <a href="#features-platform" onclick="scrollToHeading(event,'features-platform')">Platform</a>
       <a href="#calculator" onclick="scrollToHeading(event,'calculator')">Savings</a>
+      <a href="#compare" onclick="scrollToHeading(event,'compare')">See the Difference</a>
       <a href="#contact" onclick="scrollToHeading(event,'contact')">Contact</a>
       <a href="#" onclick="event.preventDefault(); openCalendlyModal();" class="nav-demo-btn">Book a Demo</a>
     </div>
@@ -1715,7 +1718,7 @@
       </div>
     </section>
 -->
-    <section class="features-platform-section">
+    <section class="features-platform-section" id="features-platform">
       <div class="features-platform-container">
         <h2 class="features-platform-title">Everything You Need. All in One AI Platform.</h2>
         <div class="features-scroller-wrap">
@@ -1885,192 +1888,151 @@
         </div>
       </div>
     </section>
-<section class="compare-section" id="compare">
-  <div class="section-title">Rynova vs Competitors</div>
-  <div class="compare-table-wrap">
-    <table class="compare-table">
-      <thead>
-        <tr>
-          <th>Features</th>
-          <th>Rynova</th>
-          <th>Others</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Unlimited calls, texts, minutes, bookings</td>
-          <td class="yes">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-              <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </td>
-          <td class="no">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/>
-              <path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>Google review campaigns</td>
-          <td class="yes">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-              <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </td>          
-          <td class="no">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/>
-              <path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>Bookings, reschedules, cancellations</td>
-          <td class="yes">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-              <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </td>
-          <td class="partial">Limited</td>
-        </tr>
-        <tr>
-          <td>Multi-location & multi-staff support</td>
-          <td class="yes">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-              <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </td>
-          <td class="no">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/>
-              <path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>24/7 service (no extra cost)</td>
-          <td class="yes">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-              <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </td>
-          <td class="partial">Extra cost</td>
-        </tr>
-        <tr>
-          <td>Custom promos & follow-up</td>
-          <td class="yes">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-              <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </td>
-          <td class="no">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/>
-              <path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>Re-engages past & lost clients</td>
-          <td class="yes">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-              <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </td>
-          <td class="no">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/>
-              <path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>Live call transfer & escalation</td>
-          <td class="yes">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-              <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </td>
-          <td class="no">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/>
-              <path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>AI-powered promo optimization</td>
-          <td class="yes">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-              <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </td>
-          <td class="no">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/>
-              <path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>Custom CRM integration</td>
-          <td class="yes">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-              <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </td>
-          <td class="no">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/>
-              <path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>Go live in 24h</td>
-          <td class="yes">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-              <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </td>
-          <td class="no">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/>
-              <path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>No hidden fees</td>
-          <td class="yes">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-              <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </td>
-          <td class="no">
-            <svg width="26" height="26" viewBox="0 0 22 22" style="vertical-align:middle;" fill="none">
-              <circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/>
-              <path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/>
-            </svg>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+    <section class="compare-section" id="compare">
+      <div class="section-title">Rynova vs Competitors</div>
+      <div class="compare-table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Features</th>
+              <th>Rynova</th>
+              <th>Others</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>All-in-One CRM Platform (leads, automations, reviews, sales)</td>
+              <td class="yes">
+                <!-- Yes Checkmark SVG -->
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="partial">Limited</td>
+            </tr>
+            <tr>
+              <td>Custom CRM Integration (GHL, HubSpot, Square, etc.)</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="partial">Limited</td>
+            </tr>
+            <tr>
+              <td>Unlimited calls, texts, minutes, bookings</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="no">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/><path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </td>
+            </tr>
+            <tr>
+              <td>Built-in Email & SMS Marketing Campaigns</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="no">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/><path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </td>            
+            </tr>
+            <tr>
+              <td>Professional Website & Funnels Included</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="no">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/><path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </td>            
+            </tr>
+            <tr>
+              <td>AI-powered Campaign & Promo Optimization</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="no">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/><path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </td>
+            </tr>
+            <tr>
+              <td>Google review campaigns & reputation management</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>          
+              <td class="no">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/><path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </td>
+            </tr>
+            <tr>
+              <td>Bookings, reschedules, cancellations</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="partial">Limited</td>
+            </tr>
+            <tr>
+              <td>Multi-location & multi-staff support</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="no">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/><path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </td>
+            </tr>
+            <tr>
+              <td>24/7 service (no extra cost)</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="partial">Limited</td>
+            </tr>
+            <tr>
+              <td>Re-engages past & lost clients automatically</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="no">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/><path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </td>
+            </tr>
+            <tr>
+              <td>Live call transfer & escalation</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="no">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/><path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </td>
+            </tr>
+            <tr>
+              <td>Business phone number provided (no extra charge)</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="no">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/><path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </td>            
+            </tr>
+            <tr>
+              <td>Go live in 24h</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="no">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/><path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </td>
+            </tr>
+            <tr>
+              <td>No hidden fees, flat monthly rate</td>
+              <td class="yes">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/><path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </td>
+              <td class="no">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="11" fill="#ff8a93" opacity="0.13"/><path d="M7.5 7.5l7 7m0-7l-7 7" stroke="#ff8a93" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
 
 
     <section class="cta-section" id="contact">
