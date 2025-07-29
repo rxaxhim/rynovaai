@@ -407,7 +407,9 @@
     }
     /* ---- SUCCESS STORIES ---- */
     .case-section {
-      margin: 80px auto 0 auto; max-width: 1120px; padding: 0 3vw;
+      margin: 80px auto 0 auto;
+      max-width: 1120px;
+      padding: 0 3vw 60px 3vw; /* Adds 60px of space below the section */
     }
     .case-grid {
       display: grid; grid-template-columns: 1fr 1fr; gap: 46px 36px;
@@ -1046,6 +1048,7 @@
   margin: 80px auto 32px auto;
   padding: 0 3vw;
 }
+
 .call-demo-card {
   display: flex;
   flex-wrap: wrap;
@@ -1056,12 +1059,11 @@
   overflow: hidden;
   align-items: stretch;
   justify-content: space-between;
-  gap: 0;
   padding: 0;
   position: relative;
 }
 
-/* --- Left Side: Media --- */
+/* --- Left Side: Media & Business Info --- */
 .call-demo-media {
   display: flex;
   flex-direction: column;
@@ -1073,6 +1075,32 @@
   background: linear-gradient(150deg, #101624 68%, #19ffe515 100%);
   border-right: 1.3px solid #41ffe31c;
 }
+
+.call-demo-badges {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  margin-top: 4px;
+}
+
+.badge-red, .badge-green {
+  padding: 2.5px 10px;
+  border-radius: 11px;
+  font-size: 0.88em;
+  font-weight: 700;
+  box-shadow: 0 2px 7px #2222;
+}
+
+.badge-red {
+  background: #fd585a;
+  color: #fff;
+}
+
+.badge-green {
+  background: #41ffe3;
+  color: #0a1c18;
+}
+
 .call-demo-media-inner {
   flex-grow: 1;
   display: flex;
@@ -1080,6 +1108,7 @@
   justify-content: center;
   padding: 20px 0;
 }
+
 .call-demo-mic-img {
   width: 160px;
   height: 160px;
@@ -1090,35 +1119,33 @@
   display: block;
   margin: 0 auto;
 }
-/* Updated Badges: Smaller, above image */
-.call-demo-badges {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 14px;
-  margin-top: 4px;
-}
-.badge-red, .badge-green {
-  padding: 2.5px 10px;
-  border-radius: 11px;
-  font-size: 0.88em;
-  font-weight: 700;
-  box-shadow: 0 2px 7px #2222;
-}
-.badge-red {
-  background: #fd585a;
-  color: #fff;
-}
-.badge-green {
-  background: #41ffe3;
-  color: #0a1c18;
-}
+
 .call-demo-featured {
   text-align: center;
   margin-top: 13px;
   opacity: 1;
 }
+
 .call-demo-featured div {
   margin-top: 2px;
+}
+
+.biz-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #41ffe3;
+  margin-top: 4px;
+}
+
+.biz-location {
+  font-size: 0.98rem;
+  color: #a9fff2;
+  opacity: 0.81;
+}
+
+.label {
+  font-size: 0.92rem;
+  opacity: 0.7;
 }
 
 /* --- Right Side: Content --- */
@@ -1130,6 +1157,7 @@
   padding: 44px 46px 38px 34px;
   background: transparent;
 }
+
 .call-demo-title {
   font-size: 1.27rem;
   color: var(--main-soft);
@@ -1137,32 +1165,36 @@
   margin-bottom: 9px;
   letter-spacing: 0.01em;
 }
+
 .call-demo-desc {
+  font-size: 1.1rem;
   color: #b6ffea;
-  font-size: 1.05rem;
-  margin-bottom: 14px;
-  opacity: .93;
-  line-height: 1.45;
+  opacity: 0.93;
+  margin-bottom: 18px;
+  line-height: 1.6;
+  font-weight: 500;
 }
+
 .call-demo-highlights {
   margin: 0 0 17px 0;
   padding-left: 19px;
   color: #9effe4;
   font-size: 1.07rem;
-  opacity: .97;
+  opacity: 0.97;
   font-weight: 600;
   list-style: disc;
 }
+
 .call-demo-highlights li {
   margin-bottom: 7px;
   line-height: 1.5;
   position: relative;
-  list-style: disc;
   padding-left: 0;
   display: flex;
   align-items: center;
   gap: 7px;
 }
+
 .call-checkmark {
   color: #41ffe3;
   font-weight: 900;
@@ -1170,40 +1202,47 @@
   margin-left: 7px;
   display: inline-block;
 }
+
 .call-demo-player {
-  margin: 23px 0 20px 0;
+  margin: 22px 0;
 }
+
 .call-demo-play {
+  display: inline-block;
   background: linear-gradient(92deg, #00f6bf 43%, #41ffe3 120%);
   color: #061416;
   border: none;
-  border-radius: 11px;
-  font-size: 1.13rem;
-  font-weight: 800;
-  padding: 13px 40px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 11px 28px;
+  margin-top: 10px;
   cursor: pointer;
-  transition: background .14s, box-shadow .15s, transform .13s;
   box-shadow: 0 0 14px #41ffe366;
-  letter-spacing: .03em;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease;
 }
+
 .call-demo-play:hover {
+  transform: scale(1.04);
   background: linear-gradient(97deg, #00e2b1 60%, #41ffe3 130%);
-  color: #18292e;
-  transform: scale(1.033);
 }
+
+/* --- Quote --- */
 .call-demo-quote {
-  background: rgba(65,255,227,0.09);
+  background: rgba(65, 255, 227, 0.09);
   border-left: 3.5px solid #41ffe3;
   padding: 14px 16px 14px 17px;
   border-radius: 8px;
   font-style: italic;
   color: #b0ffe9;
-  font-size: 1.10rem;
+  font-size: 1.1rem;
   margin-top: 13px;
   max-width: 440px;
   box-shadow: 0 1px 8px #41ffe313;
   position: relative;
 }
+
 .call-demo-quote-name {
   font-size: 1.01em;
   font-weight: 700;
@@ -1213,22 +1252,38 @@
   font-style: normal;
 }
 
-/* --- Responsive Styles --- */
+/* --- Responsive --- */
 @media (max-width: 900px) {
-  .call-demo-card { flex-direction: column; }
-  .call-demo-media, .call-demo-media-inner {
+  .call-demo-card {
+    flex-direction: column;
+  }
+
+  .call-demo-media,
+  .call-demo-media-inner {
     padding: 18px 6px 13px 6px;
-    min-width: unset; max-width: unset;
+    min-width: unset;
+    max-width: unset;
     gap: 10px;
   }
-  .call-demo-content { padding: 22px 13px 22px 13px; }
-  .call-demo-featured { margin-top: 8px; }
+
+  .call-demo-content {
+    padding: 22px 13px 22px 13px;
+  }
+
+  .call-demo-featured {
+    margin-top: 8px;
+  }
+
+  .call-demo-play {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* ---- Key Features ---- */
 .features-platform-section {
   width: 100vw;
-  background: #134743; /* exactly same as your logo section */
+  background: #134743;
   margin: 0;
   padding: 0;
 }
@@ -1244,6 +1299,7 @@
   text-align: center;
   margin-bottom: 38px;
   line-height: 1.2;
+  padding: 0 16px;
 }
 .features-scroller-wrap {
   display: flex;
@@ -1264,7 +1320,6 @@
   margin: 0 16px;
   padding: 0;
   z-index: 10;
-  /* No shadow, no border, no radius */
 }
 .features-arrow svg {
   width: 48px;
@@ -1303,7 +1358,9 @@
 }
 .features-icon-wrap {
   margin-bottom: 15px;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .features-icon {
   width: 50px;
@@ -1356,7 +1413,6 @@
     box-sizing: border-box;
   }
 }
-
 
   </style>
 </head>
@@ -1619,70 +1675,38 @@
         </div>
       </div>
     </section>
-
+<!--
     <section class="call-demo-section">
       <div class="metrics-title">Real Customer Interaction</div>
       <div class="call-demo-card">
-        <!-- Left: Media & Badges -->
         <div class="call-demo-media">
-          <!-- Badges at the top -->
           <div class="call-demo-badges">
             <span class="badge-red">REAL CALL</span>
             <span class="badge-green">Verified Business</span>
           </div>
-
-          <!-- Mic image in center -->
           <div class="call-demo-media-inner">
             <img src="images/mic.jpg" alt="Barbershop Call" class="call-demo-mic-img" />
           </div>
-
-          <!-- Featured Business info at bottom -->
           <div class="call-demo-featured">
-            <div style="font-size:0.97rem;opacity:.73;">Featured Business</div>
-            <div style="font-size:1.13rem;color:#41ffe3;font-weight:800;letter-spacing:.01em;margin-top:2px;">
-              Toronto Fades Barbershop
-            </div>
-            <div style="font-size:0.98rem;color:#a9fff2;opacity:.81;margin-top:2px;">
-              Toronto, ON
-            </div>
+            <div class="label">Featured Business</div>
+            <div class="biz-name">Toronto Fades Barbershop</div>
+            <div class="biz-location">Toronto, ON</div>
           </div>
         </div>
 
-        <!-- Right: Content -->
         <div class="call-demo-content">
-          <div class="call-demo-title">Listen to Rynova handling a real inquiry for a busy barbershop.</div>
+          <p class="call-demo-desc">
+            Listen to Rynova's AI receptionist in action, helping a real customer at a busy barbershop.
+          </p>
+
           <ul class="call-demo-highlights">
-            <li>
-              Handled common booking and rescheduling questions
-              <span class="call-checkmark">
-                <svg width="26" height="26" viewBox="0 0 22 22" fill="none">
-                  <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-                  <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </li>
-            <li>
-              Explained barbershop hours and services
-              <span class="call-checkmark">
-                <svg width="26" height="26" viewBox="0 0 22 22" fill="none">
-                  <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-                  <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </li>
-            <li>
-              Booked an appointment for a new client
-              <span class="call-checkmark">
-                <svg width="26" height="26" viewBox="0 0 22 22" fill="none">
-                  <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
-                  <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </li>
+            <li>Handled booking and rescheduling <span class="call-checkmark">✔</span></li>
+            <li>Explained hours and services <span class="call-checkmark">✔</span></li>
+            <li>Booked appointment for new client <span class="call-checkmark">✔</span></li>
           </ul>
-          <div class="call-demo-player">
-            <button class="call-demo-play">&#9654; PLAY REAL CUSTOMER CALL</button>
-          </div>
+
+          <button class="call-demo-play">&#9654; Play Real Customer Call</button>
+
           <div class="call-demo-quote">
             “We never miss a client now! Rynova handles our calls—even during rush hours—books appointments, and gives all the info. Super easy and seamless.”
             <div class="call-demo-quote-name">– J. Ali, Toronto Fades Owner</div>
@@ -1690,14 +1714,14 @@
         </div>
       </div>
     </section>
-
+-->
     <section class="features-platform-section">
       <div class="features-platform-container">
         <h2 class="features-platform-title">Everything You Need. All in One AI Platform.</h2>
         <div class="features-scroller-wrap">
           <button class="features-arrow features-arrow-left" aria-label="Previous">
-            <!-- Left Arrow SVG, theme colored -->
-            <svg viewBox="0 0 128 128" width="32" height="32">
+            <!-- Left Arrow SVG, flipped horizontally -->
+            <svg viewBox="0 0 128 128" width="48" height="48">
               <path fill="#41ffe3" d="M85.2 90.7l5.4-3.7L64 64l26.6-24-5.3-2.7L56 64l29.2 26.7z"/>
               <circle fill="none" stroke="#41ffe3" stroke-width="5" opacity="0.13" cx="64" cy="64" r="62"/>
             </svg>
@@ -1706,7 +1730,7 @@
             <div class="features-scroller-card">
               <div class="features-icon-wrap">
                 <!-- Subtle phone icon -->
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <svg class="features-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
                   <circle cx="24" cy="24" r="23" fill="#41ffe3" opacity="0.13"/>
                   <path d="M17 14c2 6 8 12 14 14l3-3c.6-.6 1.5-.7 2.1-.1l3 2.9c.6.6.7 1.5.1 2.1l-2.4 2.5c-.8.8-2 1.1-3 .8C25.6 32.5 17.6 24.5 14.8 17.1c-.3-1 .1-2.1.8-2.9l2.4-2.5c.6-.6 1.5-.7 2.1-.1l2.9 3c.6.6.6 1.5 0 2.1l-3 3z" stroke="#41ffe3" stroke-width="2" stroke-linecap="round"/>
                 </svg>
@@ -1718,22 +1742,40 @@
             </div>
             <div class="features-scroller-card">
               <div class="features-icon-wrap">
-                <!-- CRM/Automation icon -->
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <!-- Modern/All-in-one CRM icon -->
+                <svg class="features-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
                   <circle cx="24" cy="24" r="23" fill="#41ffe3" opacity="0.13"/>
-                  <rect x="16" y="18" width="16" height="12" rx="2.5" stroke="#41ffe3" stroke-width="2"/>
-                  <rect x="20" y="22" width="8" height="4" rx="2" fill="#41ffe3" opacity="0.3"/>
+                  <rect x="13" y="15" width="22" height="18" rx="4" stroke="#41ffe3" stroke-width="2"/>
+                  <circle cx="20" cy="24" r="2.1" fill="#41ffe3" opacity="0.23"/>
+                  <circle cx="28" cy="24" r="2.1" fill="#41ffe3" opacity="0.19"/>
+                  <rect x="18" y="31" width="12" height="2.2" rx="1" fill="#41ffe3" opacity="0.24"/>
                 </svg>
               </div>
-              <div class="features-scroller-title">Built-In Marketing CRM</div>
+              <div class="features-scroller-title">All-in-One CRM Platform</div>
               <div class="features-scroller-desc">
-                Email &amp; SMS campaigns, websites, funnels, automations—fully customized or we integrate into your own CRM (GHL ready).
+                Get a powerful, modern CRM included—manage leads, run automations, build landing pages, send email/SMS campaigns, and track results in one seamless place.
+              </div>
+            </div>
+            <div class="features-scroller-card">
+              <div class="features-icon-wrap">
+                <!-- CRM Integration icon -->
+                <svg class="features-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="24" r="23" fill="#41ffe3" opacity="0.13"/>
+                  <rect x="14" y="18" width="8" height="12" rx="2.5" stroke="#41ffe3" stroke-width="2"/>
+                  <rect x="26" y="18" width="8" height="12" rx="2.5" stroke="#41ffe3" stroke-width="2"/>
+                  <path d="M22 24h4" stroke="#41ffe3" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="24" cy="24" r="1.5" fill="#41ffe3" opacity="0.4"/>
+                </svg>
+              </div>
+              <div class="features-scroller-title">Plug Into Your CRM</div>
+              <div class="features-scroller-desc">
+                Already have a CRM? Rynova integrates directly with your existing tools (including GHL, HubSpot, Square, and more) to keep your current workflow—just way smarter.
               </div>
             </div>
             <div class="features-scroller-card">
               <div class="features-icon-wrap">
                 <!-- Calendar icon -->
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <svg class="features-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
                   <circle cx="24" cy="24" r="23" fill="#41ffe3" opacity="0.13"/>
                   <rect x="14" y="18" width="20" height="16" rx="3" stroke="#41ffe3" stroke-width="2"/>
                   <rect x="18" y="22" width="4" height="4" fill="#41ffe3" opacity="0.3"/>
@@ -1747,8 +1789,22 @@
             </div>
             <div class="features-scroller-card">
               <div class="features-icon-wrap">
+                <!-- Promotions icon -->
+                <svg class="features-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="24" r="23" fill="#41ffe3" opacity="0.13"/>
+                  <path d="M18 30l12-12M20 28l4 4 6-6" stroke="#41ffe3" stroke-width="2.1" stroke-linecap="round"/>
+                  <rect x="12" y="34" width="24" height="4" rx="2" fill="#41ffe3" opacity="0.17"/>
+                </svg>
+              </div>
+              <div class="features-scroller-title">Automated Promotions</div>
+              <div class="features-scroller-desc">
+                Instantly send out promotions and limited-time offers by SMS or email to fill your slow days and keep your schedule packed.
+              </div>
+            </div>
+            <div class="features-scroller-card">
+              <div class="features-icon-wrap">
                 <!-- Star/Review icon -->
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <svg class="features-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
                   <circle cx="24" cy="24" r="23" fill="#41ffe3" opacity="0.13"/>
                   <path d="M24 15l2.4 6.8h7.2l-5.8 4.2 2.2 6.8-5.8-4.2-5.8 4.2 2.2-6.8-5.8-4.2h7.2L24 15z" stroke="#41ffe3" stroke-width="2" fill="#41ffe3" fill-opacity="0.13"/>
                 </svg>
@@ -1760,8 +1816,22 @@
             </div>
             <div class="features-scroller-card">
               <div class="features-icon-wrap">
+                <!-- Re-engagement icon -->
+                <svg class="features-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="24" r="23" fill="#41ffe3" opacity="0.13"/>
+                  <path d="M16 24c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8" stroke="#41ffe3" stroke-width="2"/>
+                  <polyline points="22 28 16 24 22 20" fill="none" stroke="#41ffe3" stroke-width="2.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="features-scroller-title">Client Re-Engagement</div>
+              <div class="features-scroller-desc">
+                Automatically follow up with clients who haven’t visited in a while, win back lost business, and boost loyalty—all on autopilot.
+              </div>
+            </div>
+            <div class="features-scroller-card">
+              <div class="features-icon-wrap">
                 <!-- Routing/Emergency icon -->
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <svg class="features-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
                   <circle cx="24" cy="24" r="23" fill="#41ffe3" opacity="0.13"/>
                   <path d="M24 15v18m0 0-6-6m6 6 6-6" stroke="#41ffe3" stroke-width="2" stroke-linecap="round"/>
                 </svg>
@@ -1771,10 +1841,25 @@
                 Emergencies get priority—calls can be routed instantly (e.g. burst pipes for plumbers, urgent hair fixes, etc).
               </div>
             </div>
+            <div class="features-scroller-card">
+              <div class="features-icon-wrap">
+                <!-- AI optimization icon -->
+                <svg class="features-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="24" r="23" fill="#41ffe3" opacity="0.13"/>
+                  <path d="M24 16v16M16 24h16" stroke="#41ffe3" stroke-width="2.1"/>
+                  <circle cx="24" cy="24" r="5" fill="#41ffe3" opacity="0.27"/>
+                  <circle cx="24" cy="24" r="2.5" fill="#41ffe3"/>
+                </svg>
+              </div>
+              <div class="features-scroller-title">AI-Driven Improvements</div>
+              <div class="features-scroller-desc">
+                Rynova’s AI monitors results and automatically adjusts campaigns, call flows, and offers for maximum impact and conversions.
+              </div>
+            </div>
           </div>
           <button class="features-arrow features-arrow-right" aria-label="Next">
-            <!-- Right Arrow SVG, theme colored -->
-            <svg viewBox="0 0 128 128" width="32" height="32">
+            <!-- Right Arrow SVG -->
+            <svg viewBox="0 0 128 128" width="48" height="48">
               <path fill="#41ffe3" d="M42.8 37.3 37.4 41 64 64 37.4 88l5.3 2.7L72 64 42.8 37.3z"/>
               <circle fill="none" stroke="#41ffe3" stroke-width="5" opacity="0.13" cx="64" cy="64" r="62"/>
             </svg>
