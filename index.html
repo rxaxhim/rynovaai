@@ -986,6 +986,61 @@
     border-radius: 0;
   }
 
+  .industry-section {
+  max-width: 1120px;
+  margin: 0 auto 48px auto;
+  padding: 0 3vw;
+}
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px 28px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.industry-card {
+  background: var(--glass, rgba(22,32,55,0.92));
+  border: 1.1px solid var(--border, #41ffe31a);
+  border-radius: 15px;
+  box-shadow: 0 2px 10px 0 #41ffe322;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.17s, border-color 0.17s, transform 0.16s;
+  min-height: 190px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.industry-card:hover {
+  border-color: var(--main-soft);
+  box-shadow: 0 0 22px 0 var(--main-soft), 0 2px 10px 0 #41ffe31a;
+  transform: translateY(-3px) scale(1.025);
+}
+.industry-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 14px 14px 0 0;
+  filter: brightness(0.93);
+}
+.industry-card div {
+  padding: 15px 0 13px 0;
+  font-size: 1.09rem;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+@media (max-width: 700px) {
+  .industry-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 8px;
+  }
+  .industry-card img { height: 90px;}
+  .industry-card div { font-size: 1.03rem;}
+}
+
+
 
   </style>
 </head>
@@ -1139,8 +1194,6 @@
   </div>
 </section>
 
-
-
     <section id="about" class="feature-section">
       <div class="section-title">Why Choose Rynova?</div>
       <div class="features-grid">
@@ -1170,6 +1223,47 @@
         </div>
       </div>
     </section>
+    <section class="industry-section" id="industries">
+      <div class="section-title" style="margin-top:56px;">Built for businesses like yours</div>
+      <div style="text-align:center;color:#b6ffea;font-size:1.17rem;margin-bottom:35px;opacity:.89;">
+        Join other small businesses in your industry using Rynova AI.
+      </div>
+      <div class="industry-grid">
+        <div class="industry-card">
+          <img src="images/homeservices.jpg" alt="Home Services"/>
+          <div>Home Services</div>
+        </div>
+        <div class="industry-card">
+          <img src="images/lawfirms.jpg" alt="Law Firms"/>
+          <div>Law Firms</div>
+        </div>
+        <div class="industry-card">
+          <img src="images/propertymanagement.jpg" alt="Property Management"/>
+          <div>Property Management</div>
+        </div>
+        <div class="industry-card">
+          <img src="images/construction.jpeg" alt="Construction"/>
+          <div>Construction</div>
+        </div>
+        <div class="industry-card">
+          <img src="images/realestate.jpg" alt="Real Estate"/>
+          <div>Real Estate</div>
+        </div>
+        <div class="industry-card">
+          <img src="images/plumbing.jpg" alt="Plumbing"/>
+          <div>Plumbing</div>
+        </div>
+        <div class="industry-card">
+          <img src="images/automotive.jpg" alt="Automotive"/>
+          <div>Automotive</div>
+        </div>
+        <div class="industry-card">
+          <img src="images/salons.jpg" alt="Salons"/>
+          <div>Salons</div>
+        </div>
+      </div>
+    </section>
+
     <section id="metrics" class="metrics-section">
       <div class="metrics-title">Metrics That Matter</div>
       <div class="metrics-row">
@@ -1209,6 +1303,7 @@
         </div>
       </div>
     </section>
+    
     <section id="calculator" class="calculator-section">
       <div class="section-title">Savings Calculator</div>
       <div class="calculator" id="savingsCalc">
