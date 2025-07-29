@@ -1040,6 +1040,190 @@
   .industry-card div { font-size: 1.03rem;}
 }
 
+/* ----- CALL DEMO SECTION STYLES ----- */
+.call-demo-section {
+  max-width: 1120px;
+  margin: 80px auto 32px auto;
+  padding: 0 3vw;
+}
+.call-demo-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(120deg, #131a2e 80%, #0b1019 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 38px 0 #41ffe335;
+  border: 1.3px solid var(--border, #41ffe325);
+  overflow: hidden;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* --- Left Side: Media --- */
+.call-demo-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px 34px 20px;
+  min-width: 250px;
+  max-width: 330px;
+  background: linear-gradient(150deg, #101624 68%, #19ffe515 100%);
+  border-right: 1.3px solid #41ffe31c;
+}
+.call-demo-media-inner {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+.call-demo-mic-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 13px;
+  object-fit: cover;
+  box-shadow: 0 4px 22px #41ffe317;
+  background: radial-gradient(circle, #232c44 60%, transparent 100%);
+  display: block;
+  margin: 0 auto;
+}
+/* Updated Badges: Smaller, above image */
+.call-demo-badges {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  margin-top: 4px;
+}
+.badge-red, .badge-green {
+  padding: 2.5px 10px;
+  border-radius: 11px;
+  font-size: 0.88em;
+  font-weight: 700;
+  box-shadow: 0 2px 7px #2222;
+}
+.badge-red {
+  background: #fd585a;
+  color: #fff;
+}
+.badge-green {
+  background: #41ffe3;
+  color: #0a1c18;
+}
+.call-demo-featured {
+  text-align: center;
+  margin-top: 13px;
+  opacity: 1;
+}
+.call-demo-featured div {
+  margin-top: 2px;
+}
+
+/* --- Right Side: Content --- */
+.call-demo-content {
+  flex: 2 1 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 44px 46px 38px 34px;
+  background: transparent;
+}
+.call-demo-title {
+  font-size: 1.27rem;
+  color: var(--main-soft);
+  font-weight: 900;
+  margin-bottom: 9px;
+  letter-spacing: 0.01em;
+}
+.call-demo-desc {
+  color: #b6ffea;
+  font-size: 1.05rem;
+  margin-bottom: 14px;
+  opacity: .93;
+  line-height: 1.45;
+}
+.call-demo-highlights {
+  margin: 0 0 17px 0;
+  padding-left: 19px;
+  color: #9effe4;
+  font-size: 1.07rem;
+  opacity: .97;
+  font-weight: 600;
+  list-style: disc;
+}
+.call-demo-highlights li {
+  margin-bottom: 7px;
+  line-height: 1.5;
+  position: relative;
+  list-style: disc;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.call-checkmark {
+  color: #41ffe3;
+  font-weight: 900;
+  font-size: 1.17em;
+  margin-left: 7px;
+  display: inline-block;
+}
+.call-demo-player {
+  margin: 23px 0 20px 0;
+}
+.call-demo-play {
+  background: linear-gradient(92deg, #00f6bf 43%, #41ffe3 120%);
+  color: #061416;
+  border: none;
+  border-radius: 11px;
+  font-size: 1.13rem;
+  font-weight: 800;
+  padding: 13px 40px;
+  cursor: pointer;
+  transition: background .14s, box-shadow .15s, transform .13s;
+  box-shadow: 0 0 14px #41ffe366;
+  letter-spacing: .03em;
+}
+.call-demo-play:hover {
+  background: linear-gradient(97deg, #00e2b1 60%, #41ffe3 130%);
+  color: #18292e;
+  transform: scale(1.033);
+}
+.call-demo-quote {
+  background: rgba(65,255,227,0.09);
+  border-left: 3.5px solid #41ffe3;
+  padding: 14px 16px 14px 17px;
+  border-radius: 8px;
+  font-style: italic;
+  color: #b0ffe9;
+  font-size: 1.10rem;
+  margin-top: 13px;
+  max-width: 440px;
+  box-shadow: 0 1px 8px #41ffe313;
+  position: relative;
+}
+.call-demo-quote-name {
+  font-size: 1.01em;
+  font-weight: 700;
+  margin-top: 7px;
+  color: #41ffe3;
+  opacity: 0.89;
+  font-style: normal;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 900px) {
+  .call-demo-card { flex-direction: column; }
+  .call-demo-media, .call-demo-media-inner {
+    padding: 18px 6px 13px 6px;
+    min-width: unset; max-width: unset;
+    gap: 10px;
+  }
+  .call-demo-content { padding: 22px 13px 22px 13px; }
+  .call-demo-featured { margin-top: 8px; }
+}
 
 
   </style>
@@ -1303,7 +1487,79 @@
         </div>
       </div>
     </section>
-    
+
+    <section class="call-demo-section">
+      <div class="metrics-title">Real Customer Interaction</div>
+      <div class="call-demo-card">
+        <!-- Left: Media & Badges -->
+        <div class="call-demo-media">
+          <!-- Badges at the top -->
+          <div class="call-demo-badges">
+            <span class="badge-red">REAL CALL</span>
+            <span class="badge-green">Verified Business</span>
+          </div>
+
+          <!-- Mic image in center -->
+          <div class="call-demo-media-inner">
+            <img src="images/mic.jpg" alt="Barbershop Call" class="call-demo-mic-img" />
+          </div>
+
+          <!-- Featured Business info at bottom -->
+          <div class="call-demo-featured">
+            <div style="font-size:0.97rem;opacity:.73;">Featured Business</div>
+            <div style="font-size:1.13rem;color:#41ffe3;font-weight:800;letter-spacing:.01em;margin-top:2px;">
+              Toronto Fades Barbershop
+            </div>
+            <div style="font-size:0.98rem;color:#a9fff2;opacity:.81;margin-top:2px;">
+              Toronto, ON
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="call-demo-content">
+          <div class="call-demo-title">Listen to Rynova handling a real inquiry about our AI receptionist for a busy barbershop.</div>
+          <ul class="call-demo-highlights">
+            <li>
+              Handled common booking and rescheduling questions
+              <span class="call-checkmark">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none">
+                  <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
+                  <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </li>
+            <li>
+              Explained barbershop hours and services
+              <span class="call-checkmark">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none">
+                  <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
+                  <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </li>
+            <li>
+              Booked an appointment for a new client
+              <span class="call-checkmark">
+                <svg width="26" height="26" viewBox="0 0 22 22" fill="none">
+                  <circle cx="11" cy="11" r="11" fill="#41ffe3" opacity="0.13"/>
+                  <path d="M6 11.8l3 3 7-7" stroke="#41ffe3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </li>
+          </ul>
+          <div class="call-demo-player">
+            <button class="call-demo-play">&#9654; PLAY REAL CUSTOMER CALL</button>
+          </div>
+          <div class="call-demo-quote">
+            “We never miss a client now! Rynova handles our calls—even during rush hours—books appointments, and gives all the info. Super easy and seamless.”
+            <div class="call-demo-quote-name">– J. Ali, Toronto Fades Owner</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <section id="calculator" class="calculator-section">
       <div class="section-title">Savings Calculator</div>
       <div class="calculator" id="savingsCalc">
