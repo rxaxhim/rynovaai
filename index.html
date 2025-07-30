@@ -482,6 +482,19 @@
       transition: box-shadow 0.16s, border-color 0.15s;
       outline: none;
     }
+    .calculator input[type="range"] {
+      width: 100%;
+      margin: 6px 0 15px 0;
+      accent-color: #41ffe3;
+      background: transparent;
+      height: 2.5em;
+    }
+
+    .calculator label span {
+      font-size: 1.09rem;
+      margin-left: 8px;
+    }
+
     .calculator input:focus {
       box-shadow: 0 0 4px var(--main);
       border-color: var(--main-soft);
@@ -1820,10 +1833,10 @@
       <div class="section-title">Savings Calculator</div>
       <div class="calculator" id="savingsCalc">
         <h3>How much could you save?</h3>
-        <label for="hourlyRate">What do you pay your receptionist (hourly)?</label>
-        <input id="hourlyRate" type="number" min="0" placeholder="Hourly wage in $" autocomplete="off" oninput="liveCalculateSavings()"/>
-        <label for="hoursPerWeek">How many hours per week?</label>
-        <input id="hoursPerWeek" type="number" min="0" max="168" placeholder="Hours per week" autocomplete="off" oninput="liveCalculateSavings()"/>
+          <label for="hourlyRate">Hourly wage of your reception: <span id="hourlyRateValue" style="color:#41ffe3;font-weight:700;">$25</span></label>
+          <input id="hourlyRate" type="range" min="18" max="50" step="1" value="25" oninput="updateSliderValue('hourlyRate')" onchange="liveCalculateSavings()"/>
+          <label for="hoursPerWeek">Hours per week: <span id="hoursPerWeekValue" style="color:#41ffe3;font-weight:700;">40</span><span style="color:#41ffe3;font-weight:700;">hrs</span></label>
+          <input id="hoursPerWeek" type="range" min="5" max="50" step="1" value="40" oninput="updateSliderValue('hoursPerWeek')" onchange="liveCalculateSavings()"/>
         <div class="result" id="savingsOutput"></div>
         <div class="metrics-row">
           <span>80%+ cost savings</span>
@@ -2106,30 +2119,38 @@
       const annualSavings = monthlySavings * 12;
 
       output.innerHTML = `
-        <div class="calc-results-compare" style="display:flex;gap:24px;justify-content:center;margin-bottom:12px;flex-wrap:wrap;">
-          <div style="background:#181d27a8;border-radius:10px;padding:10px 18px;min-width:120px;">
-            <div style="font-size:1em;opacity:.8;">Current</div>
-            <div id="currentCost" style="color:#41ffe3;font-weight:900;font-size:1.23em;">$${monthlyCost.toFixed(2)}</div>
+        <div class="annual-savings-hero" style="text-align:center;margin-bottom:18px;">
+          <span style="color:#8bfff2;font-size:1.01em;font-weight:700;">Annual Savings</span>
+          <span style="display:block;color:#41ffe3;font-size:2em;font-weight:900;margin:6px 0 2px 0;">$${annualSavings.toLocaleString()}</span>
+          <span style="color:#a8ffe5;font-size:1.09em;font-weight:500;">Guaranteed with Rynova AI</span>
+        </div>
+        <div class="calc-breakdown-row" style="display:flex;justify-content:center;gap:40px;margin-bottom:5px;">
+          <div>
+            <div style="color:#a8ffe5;font-size:0.93em;font-weight:400;margin-bottom:2px;">Current Cost</div>
+            <div style="color:#41ffe3;font-size:1.18em;font-weight:800;">$${monthlyCost.toFixed(2)}/mo</div>
           </div>
-
-          <div style="background:#162033b6;border-radius:10px;padding:10px 18px;min-width:120px;">
-            <div style="font-size:1em;opacity:.8;">You Save<br><span style='color:#41ffe3;font-weight:500;font-size:0.91em;'>(per month)</span></div>
-            <div id="savingsCount" style="color:#41ffe3;font-weight:900;font-size:1.23em;">$${monthlySavings.toFixed(2)}</div>
+          <div>
+            <div style="color:#a8ffe5;font-size:0.93em;font-weight:400;margin-bottom:2px;">You Save</div>
+            <div id="savingsCount" style="color:#41ffe3;font-size:1.18em;font-weight:800;">$${monthlySavings.toFixed(2)}/mo</div>
           </div>
         </div>
-        <div style="margin-bottom:10px;color:#a8ffe5;font-size:1.10em;">
-          <b>That’s <span style='color:#41ffe3;'>$${annualSavings.toLocaleString()}</span> saved every year, guaranteed.</b>
-          <br>
-          <span style="color:#8bfff2;font-size:.98em;">
-            Plus, 24/7 coverage and up to 72% more bookings.
-          </span>
+        <div class="calc-note" style="text-align:center;color:#a8ffe5;margin-top:5px;font-size:0.9em;font-weight:500;">
+          <br>24/7 coverage and up to 72% more bookings.
         </div>
       `;
+
 
       // Animate the savings number
       const savingsCount = document.getElementById('savingsCount');
       if (savingsCount) animateCount(savingsCount, 0, monthlySavings, 500);
     }
+
+    function updateSliderValue(id) {
+    const value = document.getElementById(id).value;
+    document.getElementById(id + 'Value').textContent = id === 'hourlyRate' ? `$${value}` : value;
+    liveCalculateSavings();
+  }
+
 
     // Navbar smooth scroll so heading always shows
     function scrollToHeading(e, id) {
