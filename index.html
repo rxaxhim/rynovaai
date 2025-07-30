@@ -409,7 +409,7 @@
     .case-section {
       margin: 80px auto 0 auto;
       max-width: 1120px;
-      padding: 0 3vw 60px 3vw; /* Adds 60px of space below the section */
+      padding: 0 3vw; /* Adds 60px of space below the section */
     }
     .case-grid {
       display: grid; grid-template-columns: 1fr 1fr; gap: 46px 36px;
@@ -1042,256 +1042,105 @@
   .industry-card div { font-size: 1.03rem;}
 }
 
-/* ----- CALL DEMO SECTION STYLES ----- */
-.call-demo-section {
-  max-width: 1120px;
-  margin: 80px auto 32px auto;
-  padding: 0 3vw;
+/* ---- Demo ---- */
+.rynova-timeline-section {
+  max-width: 750px;
+  margin: 70px auto 100px auto;
+  padding: 0 2vw;
 }
-
-.call-demo-card {
-  display: flex;
-  flex-wrap: wrap;
-  background: linear-gradient(120deg, #131a2e 80%, #0b1019 100%);
-  border-radius: 18px;
-  box-shadow: 0 6px 38px 0 #41ffe335;
-  border: 1.3px solid var(--border, #41ffe325);
-  overflow: hidden;
-  align-items: stretch;
-  justify-content: space-between;
-  padding: 0;
-  position: relative;
-}
-
-/* --- Left Side: Media & Business Info --- */
-.call-demo-media {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px 20px 34px 20px;
-  min-width: 250px;
-  max-width: 330px;
-  background: linear-gradient(150deg, #101624 68%, #19ffe515 100%);
-  border-right: 1.3px solid #41ffe31c;
-}
-
-.call-demo-badges {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 14px;
-  margin-top: 4px;
-}
-
-.badge-red, .badge-green {
-  padding: 2.5px 10px;
-  border-radius: 11px;
-  font-size: 0.88em;
-  font-weight: 700;
-  box-shadow: 0 2px 7px #2222;
-}
-
-.badge-red {
-  background: #fd585a;
-  color: #fff;
-}
-
-.badge-green {
-  background: #41ffe3;
-  color: #0a1c18;
-}
-
-.call-demo-media-inner {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
-}
-
-.call-demo-mic-img {
-  width: 160px;
-  height: 160px;
-  border-radius: 13px;
-  object-fit: cover;
-  box-shadow: 0 4px 22px #41ffe317;
-  background: radial-gradient(circle, #232c44 60%, transparent 100%);
-  display: block;
-  margin: 0 auto;
-}
-
-.call-demo-featured {
+.timeline-title {
   text-align: center;
-  margin-top: 13px;
-  opacity: 1;
-}
-
-.call-demo-featured div {
-  margin-top: 2px;
-}
-
-.biz-name {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #41ffe3;
-  margin-top: 4px;
-}
-
-.biz-location {
-  font-size: 0.98rem;
-  color: #a9fff2;
-  opacity: 0.81;
-}
-
-.label {
-  font-size: 0.92rem;
-  opacity: 0.7;
-}
-
-/* --- Right Side: Content --- */
-.call-demo-content {
-  flex: 2 1 460px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 44px 46px 38px 34px;
-  background: transparent;
-}
-
-.call-demo-title {
-  font-size: 1.27rem;
-  color: var(--main-soft);
+  font-size: 2.15rem;
   font-weight: 900;
-  margin-bottom: 9px;
-  letter-spacing: 0.01em;
+  color: #fff;
+  margin-bottom: 0;              /* No bottom margin */
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 22px #00f6bf24;
+  font-family: 'Outfit', sans-serif;
 }
 
-.call-demo-desc {
-  font-size: 1.1rem;
-  color: #b6ffea;
-  opacity: 0.93;
-  margin-bottom: 18px;
-  line-height: 1.6;
-  font-weight: 500;
-}
-
-.call-demo-highlights {
-  margin: 0 0 17px 0;
-  padding-left: 19px;
-  color: #9effe4;
-  font-size: 1.07rem;
-  opacity: 0.97;
-  font-weight: 600;
-  list-style: disc;
-}
-
-.call-demo-highlights li {
-  margin-bottom: 7px;
-  line-height: 1.5;
-  position: relative;
-  padding-left: 0;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.call-checkmark {
-  color: #41ffe3;
-  font-weight: 900;
-  font-size: 1.17em;
-  margin-left: 7px;
-  display: inline-block;
-}
-
-.call-demo-player {
-  margin: 22px 0;
-}
-
-.call-demo-play {
-  display: inline-block;
-  background: linear-gradient(92deg, #00f6bf 43%, #41ffe3 120%);
-  color: #061416;
-  border: none;
-  border-radius: 10px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  padding: 11px 28px;
-  margin-top: 10px;
-  cursor: pointer;
-  box-shadow: 0 0 14px #41ffe366;
-  letter-spacing: 0.02em;
-  transition: transform 0.2s ease;
-}
-
-.call-demo-play:hover {
-  transform: scale(1.04);
-  background: linear-gradient(97deg, #00e2b1 60%, #41ffe3 130%);
-}
-
-/* --- Quote --- */
-.call-demo-quote {
-  background: rgba(65, 255, 227, 0.09);
-  border-left: 3.5px solid #41ffe3;
-  padding: 14px 16px 14px 17px;
-  border-radius: 8px;
-  font-style: italic;
-  color: #b0ffe9;
-  font-size: 1.1rem;
-  margin-top: 13px;
-  max-width: 440px;
-  box-shadow: 0 1px 8px #41ffe313;
-  position: relative;
-}
-
-.call-demo-quote-name {
-  font-size: 1.01em;
-  font-weight: 700;
-  margin-top: 7px;
-  color: #41ffe3;
-  opacity: 0.89;
-  font-style: normal;
-}
-
-.gradient-highlight {
+.timeline-sub {
+  display: block;
+  text-align: center;
   font-size: 1.33rem;
   font-weight: 800;
   background: linear-gradient(92deg, #41ffe3 22%, #00f6bf 82%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
+  text-fill-color: transparent;
+  margin-top: 7px;         /* Controls title-sub gap */
+  margin-bottom: 22px;     /* Controls sub-content gap */
   letter-spacing: -.01em;
   font-family: 'Outfit', sans-serif;
 }
-
-/* --- Responsive --- */
-@media (max-width: 900px) {
-  .call-demo-card {
-    flex-direction: column;
-  }
-
-  .call-demo-media,
-  .call-demo-media-inner {
-    padding: 18px 6px 13px 6px;
-    min-width: unset;
-    max-width: unset;
-    gap: 10px;
-  }
-
-  .call-demo-content {
-    padding: 22px 13px 22px 13px;
-  }
-
-  .call-demo-featured {
-    margin-top: 8px;
-  }
-
-  .call-demo-play {
-    width: 100%;
-    text-align: center;
-  }
-  .gradient-highlight { font-size: 1.08rem; }
+.rynova-timeline {
+  border-left: 5px solid #00f6bf30;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 0 0 48px;
+  background: none;
 }
+.timeline-step {
+  position: relative;
+  margin-bottom: 52px;
+  opacity: 0.6;
+  transform: translateY(40px) scale(0.97);
+  transition: all 0.6s cubic-bezier(.66,0,.16,1);
+}
+.timeline-step:last-child { margin-bottom: 0; }
+.timeline-step.active {
+  opacity: 1;
+  transform: translateY(0) scale(1.01);
+}
+.timeline-icon-wrap {
+  position: absolute;
+  left: -64px;
+  top: 0;
+  z-index: 2;
+  background: radial-gradient(circle, #41ffe3 50%, #00f6bf22 90%);
+  border-radius: 50%;
+  box-shadow: 0 0 26px #41ffe3a8, 0 2px 6px #00f6bf33;
+}
+.timeline-step.active .timeline-icon-wrap {
+  background: radial-gradient(circle, #41ffe3 75%, #00f6bf 95%);
+  box-shadow: 0 0 34px #41ffe3cc, 0 2px 8px #00f6bf77;
+}
+.timeline-content {
+  background: #181e2c;
+  border-radius: 14px;
+  padding: 18px 23px 15px 25px;
+  min-height: 58px;
+  box-shadow: 0 4px 24px #00f6bf14;
+  border: 1.2px solid #00f6bf27;
+  text-align: left;
+  font-family: 'Outfit', sans-serif;
+}
+.timeline-step-title {
+  font-size: 1.09rem;
+  color: #41ffe3;
+  font-weight: 800;
+  margin-bottom: 4px;
+  letter-spacing: -.01em;
+}
+.timeline-step-desc {
+  font-size: 0.99rem;
+  color: #b6ffea;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0.86;
+}
+
+@media (max-width:650px) {
+  .rynova-timeline-section { padding: 0 4vw; }
+  .timeline-title { font-size: 1.6rem; }
+  .timeline-sub { font-size: 1.08rem; }
+  .rynova-timeline { padding-left: 26px; }
+  .timeline-icon-wrap { left: -38px; width: 32px !important; height: 32px !important; }
+  .timeline-step-title { font-size: 1.01rem; }
+  .timeline-step-desc { font-size: 0.91rem; }
+}
+
 
 /* ---- Key Features ---- */
 .features-platform-section {
@@ -1447,6 +1296,7 @@
       <a href="#industries" onclick="scrollToHeading(event,'industries')">Industries</a>
       <a href="#metrics" onclick="scrollToHeading(event,'metrics')">Metrics</a>
       <a href="#success" onclick="scrollToHeading(event,'success')">Success Stories</a>
+      <a href="#journey-timeline" onclick="scrollToHeading(event,'journey-timeline')">System in Action</a>
       <a href="#features-platform" onclick="scrollToHeading(event,'features-platform')">Platform</a>
       <a href="#calculator" onclick="scrollToHeading(event,'calculator')">Savings</a>
       <a href="#compare" onclick="scrollToHeading(event,'compare')">See the Difference</a>
@@ -1691,46 +1541,95 @@
         </div>
       </div>
     </section>
-<!--
-    <section class="call-demo-section">
-      <div class="metrics-title">Real Customer Interaction</div>
-      <div class="call-demo-card">
-        <div class="call-demo-media">
-          <div class="call-demo-badges">
-            <span class="badge-red">REAL CALL</span>
-            <span class="badge-green">Verified Business</span>
+
+    <section class="rynova-timeline-section">
+      <h2 class="timeline-title" id="journey-timeline">
+        Every Client Journey, Automated
+        <span class="timeline-sub">How Rynova AI Handles 24/7 Engagement</span>
+      </h2>
+      <div class="rynova-timeline">
+        <!-- Step 1 -->
+        <div class="timeline-step">
+          <div class="timeline-icon-wrap">
+            <!-- Call Icon -->
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+              <circle cx="19" cy="19" r="17" fill="#101624" stroke="#00f6bf" stroke-width="2"/>
+              <path d="M25.2 23.1c-2.6 0-5.1-1-7-2.9a10 10 0 0 1-2.9-7c0-.4.2-.8.6-1l3.3-1.7a1 1 0 0 1 1.1.1l1.9 2c.2.2.3.6.2.9l-.7 2a8.5 8.5 0 0 0 4.7 4.7l2-.7c.3-.1.7 0 .9.2l2 1.9c.3.3.3.8.1 1.1l-1.7 3.3c-.2.4-.6.6-1 .6z" stroke="#41ffe3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
           </div>
-          <div class="call-demo-media-inner">
-            <img src="images/mic.jpg" alt="Barbershop Call" class="call-demo-mic-img" />
-          </div>
-          <div class="call-demo-featured">
-            <div class="label">Featured Business</div>
-            <div class="biz-name">Toronto Fades Barbershop</div>
-            <div class="biz-location">Toronto, ON</div>
+          <div class="timeline-content">
+            <div class="timeline-step-title">Call or Text Comes In</div>
+            <div class="timeline-step-desc">Rynova instantly answers every call or SMS—no missed contacts, no manual handling.</div>
           </div>
         </div>
-
-        <div class="call-demo-content">
-          <p class="call-demo-desc">
-            Listen to Rynova's AI receptionist in action, helping a real customer at a busy barbershop.
-          </p>
-
-          <ul class="call-demo-highlights">
-            <li>Handled booking and rescheduling <span class="call-checkmark">✔</span></li>
-            <li>Explained hours and services <span class="call-checkmark">✔</span></li>
-            <li>Booked appointment for new client <span class="call-checkmark">✔</span></li>
-          </ul>
-
-          <button class="call-demo-play">&#9654; Play Real Customer Call</button>
-
-          <div class="call-demo-quote">
-            “We never miss a client now! Rynova handles our calls—even during rush hours—books appointments, and gives all the info. Super easy and seamless.”
-            <div class="call-demo-quote-name">– J. Ali, Toronto Fades Owner</div>
+        <!-- Step 2 -->
+        <div class="timeline-step">
+          <div class="timeline-icon-wrap">
+            <!-- AI Robot SVG -->
+            <svg viewBox="0 0 32 32" width="38" height="38"><circle cx="16" cy="16" r="15" fill="#101624" stroke="#00f6bf" stroke-width="2"/><rect x="8" y="11" width="16" height="12" rx="5" fill="#00f6bf"/><circle cx="12" cy="17" r="1.4" fill="#101624"/><circle cx="20" cy="17" r="1.4" fill="#101624"/><rect x="13" y="20" width="6" height="1.5" rx="0.7" fill="#101624"/></svg>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step-title">Conversational AI Handles Booking</div>
+            <div class="timeline-step-desc">Friendly, ultra human AI collects details, answers questions, books/reschedules/cancels or escalates, and confirms with the client.</div>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="timeline-step">
+          <div class="timeline-icon-wrap">
+            <!-- CRM/Calendar Icon -->
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+              <circle cx="19" cy="19" r="17" fill="#101624" stroke="#00f6bf" stroke-width="2"/>
+              <rect x="10" y="13" width="18" height="13" rx="3" fill="#181e2c" stroke="#41ffe3" stroke-width="1.6"/>
+              <rect x="14" y="18" width="4" height="4" rx="1" fill="#41ffe3"/>
+              <rect x="20" y="18" width="4" height="4" rx="1" fill="#00f6bf"/>
+              <rect x="14" y="15" width="10" height="1.2" rx="0.6" fill="#41ffe3" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step-title">Instant Calendar/CRM Sync</div>
+            <div class="timeline-step-desc">Booking is auto-logged—appears instantly in your calendar or CRM, no data entry, no errors.</div>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="timeline-step">
+          <div class="timeline-icon-wrap">
+            <!-- SMS Icon -->
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+              <circle cx="19" cy="19" r="17" fill="#101624" stroke="#00f6bf" stroke-width="2"/>
+              <rect x="10" y="14" width="18" height="10" rx="3" fill="#181e2c" stroke="#41ffe3" stroke-width="1.5"/>
+              <path d="M13 18l6 4 6-4" stroke="#41ffe3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step-title">Automated SMS Reminders</div>
+            <div class="timeline-step-desc">Clients get friendly text reminders—no-shows and last-minute confusion disappear.</div>
+          </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="timeline-step">
+          <div class="timeline-icon-wrap">
+            <!-- Star SVG -->
+            <svg viewBox="0 0 32 32" width="38" height="38"><circle cx="16" cy="16" r="15" fill="#101624" stroke="#00f6bf" stroke-width="2"/><polygon points="16,10 18,16 24,16 19,19 20,25 16,21.5 12,25 13,19 8,16 14,16" fill="#41ffe3" stroke="#00f6bf" stroke-width="0.8"/></svg>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step-title">Review & Feedback Requests</div>
+            <div class="timeline-step-desc">After the visit, Rynova automatically asks for a Google review or rating by SMS—boosting your online presence.</div>
+          </div>
+        </div>
+        <!-- Step 6 -->
+        <div class="timeline-step">
+          <div class="timeline-icon-wrap">
+            <!-- Promo/Engage SVG (Repeat Arrow) -->
+            <svg viewBox="0 0 32 32" width="38" height="38"><circle cx="16" cy="16" r="15" fill="#101624" stroke="#00f6bf" stroke-width="2"/><path d="M12 20h8m0 0-2 2m2-2-2-2" stroke="#41ffe3" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M20 12h-8m0 0 2-2m-2 2 2 2" stroke="#41ffe3" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-step-title">Personalized Follow-Ups & Re-engagement</div>
+            <div class="timeline-step-desc">From friendly check-ins to promo offers, Rynova automates follow-ups, keeping clients engaged and coming back.</div>
           </div>
         </div>
       </div>
     </section>
--->
+
     <section class="features-platform-section" id="features-platform">
       <div class="features-platform-container">
         <h2 class="features-platform-title">Everything You Need. All in One AI Platform.</h2>
@@ -2313,7 +2212,20 @@
     document.querySelector('.features-arrow-right').onclick = () => {
       scroller.scrollBy({ left: 350, behavior: 'smooth' });
     };
-
+    
+    document.addEventListener("DOMContentLoaded", function() {
+      const steps = document.querySelectorAll('.timeline-step');
+      function animateSteps() {
+        const trigger = window.innerHeight * 0.8;
+        steps.forEach((step, idx) => {
+          const top = step.getBoundingClientRect().top;
+          if (top < trigger) step.classList.add('active');
+          else step.classList.remove('active');
+        });
+      }
+      animateSteps();
+      window.addEventListener('scroll', animateSteps);
+    });
   </script>
 </body>
 </html>
