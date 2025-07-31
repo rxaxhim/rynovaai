@@ -1317,6 +1317,109 @@
   }
 }
 
+/* ---- FAQ ---- */
+.faq-section {
+  background: none;
+  padding: 80px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 36px;
+  line-height: 1.2;
+  padding: 0 12px;
+}
+
+.faq-list {
+  width: 100%;
+  max-width: 690px;
+  padding: 0 0;
+}
+
+.faq-item {
+  border-bottom: 1.6px solid #41ffe328;
+  background: transparent;
+  margin-bottom: 0;
+  transition: border-color .17s;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  color: #41ffe3;
+  font-size: 1.15rem;
+  font-family: 'Outfit', 'Inter', 'Arial', sans-serif;
+  font-weight: 700;
+  width: 100%;
+  padding: 21px 0 13px 0;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 0.01em;
+  transition: color .15s;
+}
+
+.faq-item:not(.open):hover,
+.faq-item:not(.open):focus-within {
+  border-bottom: 1.6px solid #41ffe3;
+}
+
+.faq-item.open {
+  border-bottom: 1.6px solid #41ffe3;
+}
+
+.faq-arrow {
+  margin-left: 16px;
+  transition: transform .33s cubic-bezier(.67,0,.42,1.13);
+  opacity: 0.84;
+}
+.faq-item.open .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .45s cubic-bezier(.86,0,.46,1), opacity .22s;
+  color: #c3fff1;
+  font-size: 1.06rem;
+  font-weight: 400;
+  line-height: 1.56;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px;
+  opacity: 1;
+  padding-bottom: 14px;
+}
+
+@media (max-width: 700px) {
+  .faq-list {
+    padding: 0 3vw;
+    max-width: 99vw;
+  }
+  .faq-question {
+    font-size: 1.01rem; 
+    padding: 17px 0 9px 0;
+  }
+  .faq-answer {
+    font-size: 0.97rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -1341,6 +1444,7 @@
       <a href="#features-platform" onclick="scrollToHeading(event,'features-platform')">Features</a>
       <a href="#calculator" onclick="scrollToHeading(event,'calculator')">Savings</a>
       <a href="#compare" onclick="scrollToHeading(event,'compare')">How We Compare</a>
+      <a href="#faq" onclick="scrollToHeading(event,'faq')">FAQ</a>
       <a href="#contact" onclick="scrollToHeading(event,'contact')">Contact</a>
       <a href="#" onclick="event.preventDefault(); openCalendlyModal();" class="nav-demo-btn">Book a Demo</a>
     </div>
@@ -2063,6 +2167,100 @@
       </div>
     </section>
 
+    <section class="faq-section">
+      <div class="section-title" id="faq">Frequently Asked Questions</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            What is Rynova AI and how is it different?
+            <span class="faq-arrow">
+              <svg width="28" height="28" viewBox="0 0 24 24"><path d="M6 10l6 6 6-6" stroke="#41ffe3" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Rynova is a 24/7 AI receptionist and automation system that <b>handles everything for you</b>—from live call answering to CRM/calendar integrations, follow-ups, review requests, reminders, and even custom workflows. We set it up end-to-end, so you never have to touch a thing.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you set up all the integrations for me?
+            <span class="faq-arrow">
+              <svg width="28" height="28" viewBox="0 0 24 24"><path d="M6 10l6 6 6-6" stroke="#41ffe3" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <b>Yes—100% done for you.</b> We connect your CRM, calendar, SMS, email, review tools, and more, so your system is truly plug-and-play. You just hand us access, and we handle the rest.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What locations do you serve?
+            <span class="faq-arrow">
+              <svg width="28" height="28" viewBox="0 0 24 24"><path d="M6 10l6 6 6-6" stroke="#41ffe3" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Rynova serves businesses in <b>Mississauga, Toronto, the GTA, and throughout Canada and the United States</b>. We specialize in AI automation for local service businesses in the Greater Toronto Area, but also support clients across North America. Every system is customized for your region and timezone.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How quickly can I get started?
+            <span class="faq-arrow">
+              <svg width="28" height="28" viewBox="0 0 24 24"><path d="M6 10l6 6 6-6" stroke="#41ffe3" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Most clients go live in <b>24-48 hours</b> after onboarding. We handle all setup, testing, and launch for you.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can Rynova handle multiple staff or locations?
+            <span class="faq-arrow">
+              <svg width="28" height="28" viewBox="0 0 24 24"><path d="M6 10l6 6 6-6" stroke="#41ffe3" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Yes! Rynova supports <b>multi-location businesses</b> and can route calls, bookings, and reminders to the right staff or team automatically.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Is Rynova secure and privacy-compliant?
+            <span class="faq-arrow">
+              <svg width="28" height="28" viewBox="0 0 24 24"><path d="M6 10l6 6 6-6" stroke="#41ffe3" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Absolutely. All data is encrypted and your workflows are fully compliant with privacy laws (PIPEDA, HIPAA-ready on request). You control your data and integrations.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What if I already have a CRM or booking system?
+            <span class="faq-arrow">
+              <svg width="28" height="28" viewBox="0 0 24 24"><path d="M6 10l6 6 6-6" stroke="#41ffe3" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            No problem—Rynova’s team will connect and integrate with your CRM and booking tools (GoHighLevel, Square, HubSpot, Google Calendar, and more) for you. We handle the entire setup, so everything works seamlessly—no technical work needed on your end.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What does onboarding look like?
+            <span class="faq-arrow">
+              <svg width="28" height="28" viewBox="0 0 24 24"><path d="M6 10l6 6 6-6" stroke="#41ffe3" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            After a brief consult, you provide us access to your tools—we configure everything, test it live, and show you how to use your dashboard. No technical skills needed.
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-section" id="contact">
       <h2>Ready to Grow your Business?</h2>
       <p>
@@ -2082,6 +2280,7 @@
           <a href="#" onclick="scrollToHeading(event,'features-platform')">Features</a>
           <a href="#" onclick="scrollToHeading(event,'calculator')">Savings</a>
           <a href="#" onclick="scrollToHeading(event,'compare')">How We Compare</a>
+          <a href="#faq" onclick="scrollToHeading(event,'faq')">FAQ</a>
           <a href="#" onclick="scrollToHeading(event,'contact')">Contact</a>
           <a href="#" onclick="event.preventDefault(); openCalendlyModal();">Book a Demo</a>
         </div>
@@ -2354,6 +2553,20 @@
       }
       animateSteps();
       window.addEventListener('scroll', animateSteps);
+    });
+
+    // FAQ Accordion Behavior
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const item = this.parentElement;
+        if (item.classList.contains('open')) {
+          item.classList.remove('open');
+        } else {
+          // Close others if you want only one open at a time
+          document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+          item.classList.add('open');
+        }
+      });
     });
   </script>
 </body>
