@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main pages -->
   <url>
     <loc>https://www.rynovaai.com/</loc>
     <priority>1.0</priority>
@@ -11,5 +12,31 @@
   <url>
     <loc>https://www.rynovaai.com/termsofservice.html</loc>
     <priority>0.4</priority>
+  </url>
+
+  <!-- Favicon & related assets -->
+  <url>
+    <loc>https://www.rynovaai.com/favicon.ico</loc>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.rynovaai.com/favicon.png</loc>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.rynovaai.com/my-favicon/favicon-96x96.png</loc>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.rynovaai.com/my-favicon/favicon.svg</loc>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.rynovaai.com/my-favicon/apple-touch-icon.png</loc>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.rynovaai.com/my-favicon/site.webmanifest</loc>
+    <priority>0.2</priority>
   </url>
 </urlset>
